@@ -281,7 +281,7 @@ export default function NoCreditCheckLoansPage() {
                   {" "}<span className="text-gray-500">— Understand your credit rights and dispute errors</span>
                 </li>
                 <li>
-                  <a href="https://www.ftc.gov/consumer-advice/money-and-credit/borrowing-and-credit" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">FTC — Borrowing and Credit</a>
+                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">FTC — Borrowing and Credit</a>
                   {" "}<span className="text-gray-500">— Avoid scams and predatory lenders</span>
                 </li>
                 <li>

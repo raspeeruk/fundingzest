@@ -290,7 +290,7 @@ export default function BadCreditLoansPage() {
                   {" "}<span className="text-gray-500">— Learn how FICO scores work and what affects them</span>
                 </li>
                 <li>
-                  <a href="https://www.ftc.gov/consumer-advice/money-and-credit/borrowing-and-credit" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">FTC — Borrowing and Credit</a>
+                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">FTC — Borrowing and Credit</a>
                   {" "}<span className="text-gray-500">— Federal guidance on avoiding lending scams</span>
                 </li>
               </ul>

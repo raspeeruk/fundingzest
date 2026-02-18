@@ -363,7 +363,7 @@ export default async function LoanAmountPage({ params }: Props) {
                 </li>
                 <li>
                   <a
-                    href="https://www.ftc.gov/consumer-advice/money-and-credit/borrowing-and-credit"
+                    href="https://consumer.ftc.gov/credit-loans-and-debt"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-green-700 underline"

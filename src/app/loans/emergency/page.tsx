@@ -335,7 +335,7 @@ export default function EmergencyLoansPage() {
                   {" "}<span className="text-gray-500">— Find government assistance programs you may qualify for</span>
                 </li>
                 <li>
-                  <a href="https://www.ncua.gov/consumers/payday-alternative-loans" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">NCUA — Payday Alternative Loans</a>
+                  <a href="https://www.ncua.gov/consumers/financial-literacy-resources" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">NCUA — Payday Alternative Loans</a>
                   {" "}<span className="text-gray-500">— Lower-cost alternatives from federal credit unions</span>
                 </li>
               </ul>

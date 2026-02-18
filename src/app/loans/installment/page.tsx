@@ -328,7 +328,7 @@ export default function InstallmentLoansPage() {
               </h2>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="https://www.consumerfinance.gov/consumer-tools/loans/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">CFPB — Personal Loans</a>
+                  <a href="https://www.consumerfinance.gov/ask-cfpb/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">CFPB — Personal Loans</a>
                   {" "}<span className="text-gray-500">— Federal guidance on personal loan rights and protections</span>
                 </li>
                 <li>
@@ -336,7 +336,7 @@ export default function InstallmentLoansPage() {
                   {" "}<span className="text-gray-500">— Check your credit report before applying</span>
                 </li>
                 <li>
-                  <a href="https://www.ftc.gov/consumer-advice/money-and-credit/borrowing-and-credit" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">FTC — Borrowing and Credit</a>
+                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">FTC — Borrowing and Credit</a>
                   {" "}<span className="text-gray-500">— Avoid lending scams and understand your rights</span>
                 </li>
                 <li>

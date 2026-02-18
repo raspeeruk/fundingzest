@@ -49,9 +49,15 @@ export function getAllGuides(): Guide[] {
   });
 }
 
+export function isGuidePublished(frontmatter: GuideFrontmatter): boolean {
+  if (!frontmatter.published) return false;
+  const today = new Date().toISOString().slice(0, 10);
+  return frontmatter.publishedDate <= today;
+}
+
 export function getPublishedGuides(): Guide[] {
   return getAllGuides()
-    .filter((g) => g.frontmatter.published)
+    .filter((g) => isGuidePublished(g.frontmatter))
     .sort(
       (a, b) =>
         new Date(b.frontmatter.updatedDate).getTime() -

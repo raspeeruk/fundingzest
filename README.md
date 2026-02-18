@@ -34,3 +34,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Scheduled Netlify Deploys
+
+This repo includes a scheduled GitHub Actions workflow at `.github/workflows/netlify-scheduled-deploy.yml`.
+
+- It runs daily at `14:00 UTC` and can also be triggered manually.
+- It triggers a Netlify build hook using the `NETLIFY_BUILD_HOOK_URL` GitHub Actions secret.
+
+To configure:
+
+1. In Netlify, create or copy your site build hook URL.
+2. In GitHub, go to `Settings -> Secrets and variables -> Actions`.
+3. Add a new repository secret named `NETLIFY_BUILD_HOOK_URL` with the hook URL value.

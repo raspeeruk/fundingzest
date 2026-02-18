@@ -4,7 +4,11 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { createMetadata } from "@/lib/seo/metadata";
-import { getGuideBySlug, getPublishedGuideSlugs } from "@/lib/data/guides";
+import {
+  getGuideBySlug,
+  getPublishedGuideSlugs,
+  isGuidePublished,
+} from "@/lib/data/guides";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { FAQSchema } from "@/components/seo/FAQSchema";
@@ -22,7 +26,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const guide = getGuideBySlug(slug);
-  if (!guide) return {};
+  if (!guide || !isGuidePublished(guide.frontmatter)) return {};
 
   return createMetadata({
     title: guide.frontmatter.title,
@@ -225,7 +229,7 @@ function TableOfContents({ content }: { content: string }) {
 export default async function GuidePage({ params }: Props) {
   const { slug } = await params;
   const guide = getGuideBySlug(slug);
-  if (!guide || !guide.frontmatter.published) notFound();
+  if (!guide || !isGuidePublished(guide.frontmatter)) notFound();
 
   const { frontmatter, content } = guide;
 

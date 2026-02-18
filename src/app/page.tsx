@@ -312,7 +312,7 @@ export default function HomePage() {
               </p>
             </a>
             <a
-              href="https://www.ftc.gov/consumer-advice/money-and-credit/borrowing-and-credit"
+              href="https://consumer.ftc.gov/credit-loans-and-debt"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg border border-gray-200 bg-white p-4 text-sm transition-colors hover:border-green-300"

@@ -421,11 +421,11 @@ export default function PaydayLoansPage() {
                   {" "}<span className="text-gray-500">— Federal guidance on payday lending rights and protections</span>
                 </li>
                 <li>
-                  <a href="https://www.ftc.gov/news-events/topics/consumer-finance/payday-lending" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">Federal Trade Commission (FTC) — Payday Lending</a>
+                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">Federal Trade Commission (FTC) — Payday Lending</a>
                   {" "}<span className="text-gray-500">— Consumer protection information and enforcement actions</span>
                 </li>
                 <li>
-                  <a href="https://www.ncua.gov/consumers/payday-alternative-loans" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">National Credit Union Administration (NCUA) — Payday Alternative Loans</a>
+                  <a href="https://www.ncua.gov/consumers/financial-literacy-resources" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">National Credit Union Administration (NCUA) — Payday Alternative Loans</a>
                   {" "}<span className="text-gray-500">— Information on lower-cost PAL alternatives from credit unions</span>
                 </li>
                 <li>
