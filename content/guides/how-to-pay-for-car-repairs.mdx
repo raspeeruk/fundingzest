@@ -29,7 +29,16 @@ faqs:
     answer: "If the repair cost exceeds the car's value or you truly cannot afford any option, consider selling the vehicle for parts, using public transit temporarily, carpooling, or contacting local charities that donate vehicles to people in need. Some cities also have low-cost car-sharing programs for essential trips."
 ---
 
-An unexpected car repair bill can derail your finances fast. If your check engine light just came on and your bank account is running low, you are not alone — nearly 40% of Americans say they would struggle to cover a $400 emergency expense, according to the Federal Reserve.
+<StatsGrid title="Car Repair Costs: The Numbers" stats={[
+  { value: "$500–$600", label: "Average unexpected car repair cost (AAA)", icon: "dollar" },
+  { value: "40%", label: "Of Americans would struggle to cover a $400 emergency", icon: "warning" },
+  { value: "300%+", label: "Typical APR on payday loans for car repairs", icon: "trending-up" },
+  { value: "1 in 5", label: "Title loan borrowers who lose their vehicle", icon: "x" }
+]} />
+
+An unexpected car repair bill can derail your finances fast. <StatHighlight value="40%" label="of Americans say they would struggle to cover a $400 emergency expense (Federal Reserve)" icon="warning" variant="red" />
+
+If your check engine light just came on and your bank account is running low, you are not alone.
 
 The good news: you have more options than you might think. Below are 10 ways to pay for car repairs when money is tight, ranked roughly from lowest cost to highest risk.
 
@@ -144,6 +153,11 @@ Common items that sell fast: electronics, tools, furniture, bicycles, brand-name
 
 ### 10. Payday Loan (Last Resort Only)
 
+<ComparisonRow title="Personal Loan vs. Payday Loan for Car Repairs" options={[
+  { title: "Payday Loan", variant: "red", stats: [{ label: "APR", value: "300%–600%+" }, { label: "Repayment", value: "2 weeks" }, { label: "Risk", value: "Rollover trap" }] },
+  { title: "Personal Installment Loan", variant: "green", recommended: true, stats: [{ label: "APR", value: "6%–36%" }, { label: "Repayment", value: "3–24 months" }, { label: "Risk", value: "Fixed payments" }] }
+]} />
+
 A [payday loan](/loans/payday) provides fast cash — often the same day — but at an extremely high cost. Typical APRs range from 300% to over 600%, and the short repayment term (usually two weeks) means many borrowers end up rolling the loan over multiple times.
 
 **Only consider a payday loan if:**
@@ -155,6 +169,10 @@ Before resorting to a payday loan, review our guide to [payday loan alternatives
 
 ## A Special Warning About Title Loans
 
+<Callout type="cost" title="Avoid Title Loans">
+Title loans use your vehicle as collateral — **1 in 5 title loan borrowers has their vehicle seized**. The average title loan APR exceeds 300%. Losing the very car you are trying to fix defeats the purpose.
+</Callout>
+
 If someone suggests a [title loan](/guides/title-loans-how-they-work), proceed with extreme caution. Title loans use your vehicle as collateral, which means **you can lose your car entirely** if you cannot repay. The average title loan APR exceeds 300%, and according to the [Consumer Financial Protection Bureau](https://www.consumerfinance.gov/consumer-tools/auto-loans/), one in five title loan borrowers has their vehicle seized.
 
 Losing the very car you are trying to fix defeats the purpose. A personal installment loan or community assistance is almost always a safer path.
@@ -162,6 +180,10 @@ Losing the very car you are trying to fix defeats the purpose. A personal instal
 ## How to Prevent the Next Car Repair Emergency
 
 Once you have handled the immediate crisis, take steps to avoid being in this position again:
+
+<Callout type="tip" title="Build a Car Repair Fund">
+Even **$25 per paycheck** adds up to $650 a year — enough to cover most unexpected repairs without borrowing. Automate the transfer so you never have to think about it.
+</Callout>
 
 - **Start a small car repair fund.** Even $25 per paycheck adds up to $650 a year. Our guide on [how to build an emergency fund](/guides/how-to-build-emergency-fund) walks you through a realistic savings plan.
 - **Stay on top of maintenance.** Oil changes, tire rotations, and fluid checks are far cheaper than the failures they prevent.

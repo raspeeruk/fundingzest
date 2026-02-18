@@ -27,6 +27,13 @@ faqs:
     answer: "Sometimes. Credit unions and smaller lenders may be willing to reduce or waive origination fees, especially if you're an existing customer or have strong credit. Online lenders typically have non-negotiable fee structures. Having competing offers from no-fee lenders gives you leverage."
 ---
 
+<StatsGrid title="Origination Fees: What to Know" stats={[
+  { value: "1%–8%", label: "Typical origination fee range", icon: "percent" },
+  { value: "$250", label: "Fee on a $5,000 loan at 5%", icon: "dollar" },
+  { value: "3.4%", label: "APR increase from a 4% origination fee", icon: "trending-up" },
+  { value: "0%", label: "Origination fee at many credit unions", icon: "check" }
+]} />
+
 Origination fees are one of the most commonly overlooked costs in personal lending. They are deducted before you receive your money, they increase the effective cost of your loan, and many borrowers do not fully understand how they work until after they have signed. This guide explains what origination fees are, how they affect what you actually receive and repay, and how to minimize or avoid them entirely.
 
 ## What Is an Origination Fee?
@@ -46,6 +53,10 @@ Here is what that looks like in practice:
 - You owe **$3,000** plus interest
 
 You are paying interest on the full $3,000 — including the $180 you never received. This is why origination fees matter: they reduce your usable funds while keeping your repayment obligation the same.
+
+<Callout type="warning" title="You Pay Interest on Money You Never Receive">
+An origination fee is deducted from your disbursement, but you still owe interest on the full loan amount. On a $5,000 loan with a 5% fee, you receive $4,750 but pay interest on the full $5,000.
+</Callout>
 
 ### Why Lenders Charge Origination Fees
 
@@ -94,6 +105,8 @@ Consider a $5,000 loan at 12% interest with a 4% origination fee ($200), repaid 
 - **Monthly payment:** $235.37 (calculated on $5,000 principal)
 - **Effective APR:** approximately **15.4%**
 
+<StatHighlight value="15.4%" label="Effective APR on a 12% loan with a 4% origination fee — a 3.4 percentage point hidden increase" icon="trending-up" variant="red" />
+
 The stated rate is 12%, but the actual annual cost — accounting for the fact that you only received $4,800 while repaying based on $5,000 — is closer to 15.4%. That 3.4 percentage point gap is entirely attributable to the origination fee. The federal [Truth in Lending Act](https://www.consumerfinance.gov/ask-cfpb/) requires lenders to disclose the APR precisely so borrowers can see this true cost.
 
 For a detailed breakdown of the relationship between interest rates and APR, read our guide on [APR vs interest rate](/guides/apr-vs-interest-rate).
@@ -132,6 +145,11 @@ Here is a direct comparison:
 | **Total cost of borrowing** | **$752.56** |
 | **Effective APR** | **14.0%** |
 
+<ComparisonRow title="Fee vs. No-Fee Loan ($5,000, 24 months)" options={[
+  { title: "10% Rate + 5% Fee", variant: "red", stats: [{ label: "You Receive", value: "$4,750" }, { label: "Total Cost", value: "$787" }, { label: "Effective APR", value: "~14.1%" }] },
+  { title: "14% Rate + No Fee", variant: "green", recommended: true, stats: [{ label: "You Receive", value: "$5,000" }, { label: "Total Cost", value: "$753" }, { label: "Effective APR", value: "14.0%" }] }
+]} />
+
 In this example, Loan B (no fee, higher rate) has a lower total cost by $34.72 despite the higher interest rate. The APRs are nearly identical at approximately 14%, which tells you the loans are close in true cost — but the no-fee option edges ahead because you receive the full $5,000 and pay interest only on money you actually got.
 
 Now consider the same comparison over 12 months instead of 24:
@@ -143,6 +161,10 @@ Now consider the same comparison over 12 months instead of 24:
 | **Total cost** | **$524.96** | **$397.48** |
 
 Over just 12 months, the result flips. Loan B is cheaper because the higher rate has less time to accumulate interest while the origination fee is a fixed upfront cost regardless of term. The lesson: on shorter terms, no-fee loans tend to win. On longer terms, lower-rate loans with fees can sometimes compete — but you must run the numbers.
+
+<Callout type="tip" title="Always Compare APR and Total Cost">
+Do not assume a fee makes a loan expensive, and do not assume no fee makes a loan cheap. Compare the **APR** (which includes fees) and the **total amount repaid** to determine which loan truly costs less.
+</Callout>
 
 **Always compare APR and total cost.** Do not assume a fee makes a loan expensive, and do not assume no fee makes a loan cheap.
 

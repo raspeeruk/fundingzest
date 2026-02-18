@@ -31,6 +31,13 @@ faqs:
     answer: "Secured installment loans require collateral (like a car or savings account) that the lender can seize if you default. They typically offer lower APRs because the lender takes less risk. Unsecured installment loans require no collateral but usually have higher APRs because the lender's risk is greater."
 ---
 
+<StatsGrid title="Installment Loans at a Glance" stats={[
+  { value: "$500–$35K", label: "Typical personal loan range", icon: "dollar" },
+  { value: "3–60 mo", label: "Common repayment terms", icon: "clock" },
+  { value: "6%–199%", label: "APR range depending on credit tier", icon: "percent" },
+  { value: "35%", label: "Of your FICO score is payment history", icon: "chart" }
+]} />
+
 ## What Is an Installment Loan?
 
 An installment loan is a type of financing where you borrow a fixed amount of money and repay it through a series of scheduled, equal payments over a predetermined period. Each payment — called an installment — includes a portion of the **principal** (the original amount borrowed) plus **interest** (the cost of borrowing).
@@ -122,6 +129,8 @@ The following table shows the estimated monthly payment and total cost for a **$
 | 72% | $346 | $4,155 | $219 | $5,264 |
 | 150% | $440 | $5,284 | $315 | $7,553 |
 
+<StatHighlight value="$2,284" label="Total interest on a $3,000 loan at 150% APR / 12 months" icon="warning" variant="red" />
+
 As these numbers illustrate, both a higher APR and a longer term increase the total amount you pay. A 36% APR loan over 12 months costs $636 in interest. The same loan at 150% APR costs $2,284 in interest — more than three times as much. Extending the term to 24 months at 36% APR nearly doubles the interest cost to $1,290.
 
 Understanding APR is critical. Read our detailed guide on [understanding APR for small-dollar loans](/guides/understanding-apr-small-dollar-loans) for a deeper explanation of how APR works and why it matters.
@@ -140,6 +149,11 @@ Installment loans and payday loans are both used for short-term borrowing, but t
 | **Credit Building** | Yes (most lenders report to bureaus) | Rarely |
 | **State Availability** | Varies by lender and state | Banned or restricted in many states |
 | **Best For** | Larger expenses, building credit, predictable budgeting | Very small, very short-term emergencies |
+
+<ComparisonRow title="Installment Loan vs Payday Loan" options={[
+  { title: "Installment Loan", variant: "green", recommended: true, stats: [{ label: "Typical APR", value: "6%–199%" }, { label: "Term", value: "3–60 months" }, { label: "Builds credit", value: "Yes" }] },
+  { title: "Payday Loan", variant: "red", stats: [{ label: "Typical APR", value: "200%–780%" }, { label: "Term", value: "2–4 weeks" }, { label: "Builds credit", value: "Rarely" }] }
+]} />
 
 The most significant differences are **cost** and **repayment structure**. Installment loans spread the repayment over months, making each payment manageable. Payday loans require you to repay the entire balance plus fees on your next payday, which can trigger a cycle of reborrowing if you cannot afford the lump sum.
 
@@ -179,6 +193,10 @@ Not all installment loans are created equal. Here are the key factors to compare
 
 The **APR** is the most reliable measure of a loan's cost because it includes the interest rate and most fees expressed as an annualized percentage. A loan with a lower monthly payment might actually cost more overall if it has a longer term or higher APR. Always compare APRs across lenders. The [Consumer Financial Protection Bureau](https://www.consumerfinance.gov/ask-cfpb/) recommends getting quotes from at least three lenders before choosing.
 
+<Callout type="cost" title="Watch for Origination Fees">
+Some lenders charge 1% to 10% of the loan amount as an origination fee, deducted from your proceeds. A $5,000 loan with a 5% fee only puts **$4,750** in your account. Factor this into every comparison.
+</Callout>
+
 ### Check for Origination Fees
 
 Some lenders charge an origination fee of **1% to 10%** of the loan amount. This fee is typically deducted from your loan proceeds, meaning you receive less than the full amount you borrow. A $5,000 loan with a 5% origination fee only puts $4,750 in your account. Factor this into your comparison.
@@ -186,6 +204,10 @@ Some lenders charge an origination fee of **1% to 10%** of the loan amount. This
 ### Ask About Prepayment Penalties
 
 Most reputable online lenders do **not** charge prepayment penalties, meaning you can pay off the loan early and save on interest. However, some lenders do impose penalties for early repayment. Always confirm this before signing.
+
+<Callout type="tip" title="Confirm Bureau Reporting">
+If building credit is a goal, verify that the lender reports to at least one of the three major bureaus (Equifax, Experian, TransUnion). If they do not report, your on-time payments will not help your score.
+</Callout>
 
 ### Verify Credit Bureau Reporting
 

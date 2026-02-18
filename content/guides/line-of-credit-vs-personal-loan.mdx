@@ -29,6 +29,13 @@ faqs:
     answer: "For a one-time emergency expense with a known cost, a personal loan is usually better — you get the full amount, know your exact payments, and can budget accordingly. For ongoing or unpredictable expenses, a line of credit offers more flexibility since you only draw what you need when you need it."
 ---
 
+<StatsGrid title="Personal Loan vs Line of Credit" stats={[
+  { value: "6-36%", label: "Typical APR for personal loans (fixed rate)", icon: "percent" },
+  { value: "14-36%", label: "Typical APR for unsecured lines of credit (variable)", icon: "percent" },
+  { value: "580+", label: "Minimum credit score for most personal loans", icon: "chart" },
+  { value: "650+", label: "Minimum credit score for most lines of credit", icon: "chart" }
+]} />
+
 Personal loans and lines of credit are two of the most common ways to borrow money, but they work in fundamentally different ways. A personal loan hands you a fixed lump sum that you repay on a set schedule. A line of credit gives you a pool of money you can tap into whenever you need it, paying interest only on what you actually use.
 
 Choosing the wrong one can cost you hundreds or even thousands of dollars in unnecessary interest, or leave you without the flexibility you need. This guide breaks down how each product works, what they cost, and which one makes sense for different financial situations.
@@ -121,6 +128,11 @@ Let us compare two scenarios using a $5,000 borrowing need:
 | Total Interest Paid | ~$640 | ~$808 |
 | **Total Cost** | **~$5,640** | **~$5,808** |
 
+<ComparisonRow title="Full Amount: Personal Loan vs Line of Credit" options={[
+  { title: "Personal Loan", variant: "green", recommended: true, stats: [{ label: "APR", value: "12% fixed" }, { label: "Total Interest", value: "~$640" }] },
+  { title: "Line of Credit", variant: "red", stats: [{ label: "APR", value: "15% variable" }, { label: "Total Interest", value: "~$808" }] }
+]} />
+
 **Winner: Personal loan.** When you need the full amount, the personal loan's lower fixed rate saves you money. The line of credit's higher variable rate costs you an extra $168 over two years.
 
 ### Scenario 2: You Only Need $2,000 of a $5,000 Limit
@@ -134,9 +146,18 @@ Let us compare two scenarios using a $5,000 borrowing need:
 | Total Interest Paid | ~$640 | ~$323 |
 | **Total Cost** | **~$5,640** | **~$2,323** |
 
+<ComparisonRow title="Partial Draw: Personal Loan vs Line of Credit" options={[
+  { title: "Personal Loan", variant: "red", stats: [{ label: "Borrowed", value: "$5,000" }, { label: "Total Interest", value: "~$640" }] },
+  { title: "Line of Credit", variant: "green", recommended: true, stats: [{ label: "Borrowed", value: "$2,000" }, { label: "Total Interest", value: "~$323" }] }
+]} />
+
 **Winner: Line of credit, by a wide margin.** Even with a higher APR, you pay $317 less in interest because you are only paying interest on $2,000 instead of $5,000. Plus, your monthly payment is less than half the personal loan payment, freeing up cash flow.
 
-This is the fundamental trade-off. Personal loans win on rate. Lines of credit win on flexibility. The right choice depends on how precisely you know your borrowing needs.
+<Callout type="info" title="The Fundamental Trade-Off">
+Personal loans win on rate. Lines of credit win on flexibility. If you know exactly how much you need, choose a personal loan. If your borrowing needs are uncertain or ongoing, a line of credit may cost less overall.
+</Callout>
+
+This is the fundamental trade-off. The right choice depends on how precisely you know your borrowing needs.
 
 Use our [loan calculator](/calculator) to run the numbers for your specific situation.
 
@@ -191,6 +212,8 @@ Credit cards are technically a type of revolving credit, similar to a line of cr
 - **You need the money immediately.** Credit cards provide instant purchasing power with no application wait time.
 
 **Credit cards are worse when:**
+
+<StatHighlight value="18-29%" label="typical credit card APR -- higher than both personal loans and lines of credit for large balances" icon="trending-up" variant="red" />
 
 - **The amount is large (over $5,000).** Credit card APRs typically range from 18% to 29%, higher than either personal loans or lines of credit. On large balances, this rate difference adds up fast.
 - **You need a long repayment period.** After any introductory rate expires, credit card rates are among the highest consumer rates available. A $10,000 balance at 22% APR with minimum payments could take over a decade to repay and cost you more in interest than the original balance.

@@ -29,9 +29,18 @@ faqs:
     answer: "A tradeline is any credit account listed on your report — credit cards, loans, mortgages, auto loans, student loans, and lines of credit. Each tradeline shows the creditor name, account number (partially masked), balance, credit limit, payment history, and account status."
 ---
 
+<StatsGrid title="Credit Report Facts" stats={[
+  { value: "1 in 4", label: "Consumers found errors on their credit reports (FTC)", icon: "warning" },
+  { value: "4", label: "Main sections in every credit report", icon: "info" },
+  { value: "7 Years", label: "How long most negative items stay on your report", icon: "clock" },
+  { value: "30 Days", label: "Time the bureau has to investigate your dispute", icon: "clock" }
+]} />
+
 Your credit report is the foundation of your entire financial profile. It is the raw data that credit scoring models use to calculate your score, and it is the document that lenders, landlords, insurers, and sometimes employers review when making decisions about you. Understanding how to read it is not optional — it is one of the most important financial skills you can develop.
 
-Despite how much rides on credit reports, most people have never read theirs. And among those who have, many skim through without fully understanding what they are looking at. That is a problem, because errors on credit reports are far more common than most consumers realize. A Federal Trade Commission (FTC) study found that roughly [1 in 4 consumers identified errors on their credit reports](https://consumer.ftc.gov/credit-loans-and-debt) that could affect their scores. Some of those errors are minor. Others are severe enough to result in loan denials, higher interest rates, or rejected rental applications.
+Despite how much rides on credit reports, most people have never read theirs. And among those who have, many skim through without fully understanding what they are looking at. That is a problem, because errors on credit reports are far more common than most consumers realize. <StatHighlight value="1 in 4" label="consumers identified errors on their credit reports that could affect their scores (FTC)" icon="warning" variant="red" />
+
+A Federal Trade Commission (FTC) study found that roughly [1 in 4 consumers identified errors on their credit reports](https://consumer.ftc.gov/credit-loans-and-debt) that could affect their scores. Some of those errors are minor. Others are severe enough to result in loan denials, higher interest rates, or rejected rental applications.
 
 This guide walks you through every section of your credit report so you know exactly what you are looking at, what matters, and what to do if something is wrong.
 
@@ -63,7 +72,9 @@ This site is authorized by federal law under the Fair Credit Reporting Act and i
 4. Answer identity verification questions (such as confirming a past address or a loan amount).
 5. View or download your reports immediately.
 
-**Never pay for your basic credit report.** If a website is asking for a credit card number to show you a "free" report, it is likely a paid product or a free trial that converts to a subscription. AnnualCreditReport.com is the only site you need, and it is genuinely free.
+<Callout type="warning" title="Never Pay for Your Credit Report">
+If a website asks for a credit card number to show you a "free" report, it is likely a paid product or a free trial that converts to a subscription. **AnnualCreditReport.com is the only site you need, and it is genuinely free.**
+</Callout>
 
 For more on checking your credit at no cost, including free score options, see our guide on [how to check your credit score for free](/guides/how-to-check-credit-score-free).
 
@@ -165,6 +176,11 @@ If a public record appears on your report that you do not recognize or that cont
 
 The inquiries section shows a record of every entity that has accessed your credit report. There are two types, and the distinction between them matters:
 
+<ComparisonRow title="Hard Inquiry vs. Soft Inquiry" options={[
+  { title: "Hard Inquiry", variant: "red", stats: [{ label: "Affects Score", value: "Yes (3-5 pts)" }, { label: "Stays on Report", value: "2 years" }, { label: "Triggered By", value: "Credit applications" }] },
+  { title: "Soft Inquiry", variant: "green", recommended: true, stats: [{ label: "Affects Score", value: "No" }, { label: "Stays on Report", value: "Varies" }, { label: "Triggered By", value: "Pre-approvals, self-checks" }] }
+]} />
+
 ### Hard Inquiries
 
 A hard inquiry occurs when you apply for credit and the lender pulls your report to make a lending decision. Hard inquiries remain on your report for **2 years** and can lower your score by a few points each.
@@ -208,6 +224,10 @@ Now that you understand each section, here is a targeted checklist of the most c
 | Accounts from identity theft | Accounts you never opened, addresses you never lived at | Severely damages your credit profile |
 
 Take your time reviewing your report. Compare it against your own records — bank statements, payment receipts, loan documents. If something does not match, note it.
+
+<Callout type="tip" title="Check All Three Bureaus">
+Each bureau collects data independently — an error on one report may not appear on the others. Pull reports from **Equifax, Experian, and TransUnion** and compare them side by side for the most thorough review.
+</Callout>
 
 ## What to Do If You Find an Error
 

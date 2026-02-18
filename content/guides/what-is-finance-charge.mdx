@@ -27,6 +27,12 @@ faqs:
     answer: "Yes. You can reduce the finance charge by: getting a lower APR (shop around), choosing a shorter term (less time for interest to accrue), making extra payments (reduces principal faster), choosing a lender with lower fees, or improving your credit score before borrowing."
 ---
 
+<StatsGrid title="Finance Charge Essentials" stats={[
+  { value: "$450", label: "Finance charge on a $3,000 loan — the total cost above what you borrowed", icon: "dollar" },
+  { value: "$1,453", label: "Difference in finance charges between 12% and 36% APR on a $5K loan", icon: "trending-up" },
+  { value: "$300", label: "What a $75 payday loan fee becomes after just 3 rollovers", icon: "warning" }
+]} />
+
 ## What Is a Finance Charge?
 
 A finance charge is the total dollar cost of borrowing money. It represents every cent you pay above and beyond the original amount you borrowed — including interest, origination fees, and other mandatory charges imposed by the lender.
@@ -35,7 +41,9 @@ Think of it this way: if you borrow $3,000 and repay $3,450 over the life of the
 
 The finance charge is one of the most important numbers on any loan disclosure because it tells you, in plain dollars, exactly what the loan costs. While the APR expresses cost as an annual percentage (useful for comparing loans), the finance charge gives you the concrete figure — the actual money leaving your pocket.
 
-Under the federal [Truth in Lending Act (TILA)](https://www.consumerfinance.gov/ask-cfpb/), every lender in the United States is required to disclose the finance charge before you sign a loan agreement. This disclosure is not optional. If a lender cannot or will not tell you the finance charge, that is a serious red flag.
+<Callout type="warning" title="TILA Requires Finance Charge Disclosure">
+Under the federal [Truth in Lending Act (TILA)](https://www.consumerfinance.gov/ask-cfpb/), every lender in the United States is **required** to disclose the finance charge before you sign a loan agreement. This disclosure is not optional. If a lender cannot or will not tell you the finance charge, that is a serious red flag.
+</Callout>
 
 ## What's Included in a Finance Charge
 
@@ -80,6 +88,11 @@ For a deeper explanation of how APR works and how to use it for comparisons, rea
 
 For installment loans with fixed payments, the finance charge is determined by three variables: the **principal** (amount borrowed), the **APR**, and the **term** (repayment period). A higher APR, a larger principal, or a longer term all increase the finance charge.
 
+<ComparisonRow title="$1,000 Loan for 12 Months: Low vs High APR" options={[
+  { title: "12% APR", variant: "green", recommended: true, stats: [{ label: "Monthly Payment", value: "$89" }, { label: "Finance Charge", value: "$66" }] },
+  { title: "36% APR", variant: "red", stats: [{ label: "Monthly Payment", value: "$100" }, { label: "Finance Charge", value: "$206" }] }
+]} />
+
 Here is what the finance charge looks like for a **$1,000 loan** repaid over **12 months** at three different APR levels:
 
 | APR | Monthly Payment | Total Repaid | Finance Charge |
@@ -98,7 +111,9 @@ Now consider the same APRs applied to a **$5,000 loan** over **24 months**:
 | 24% | $264 | $6,340 | $1,340 |
 | 36% | $296 | $7,094 | $2,094 |
 
-At larger amounts and longer terms, the finance charge grows substantially. The difference between 12% and 36% APR on a $5,000 loan over 24 months is $1,453 — a significant sum for most borrowers.
+<StatHighlight value="$1,453" label="Extra cost of 36% APR vs 12% APR on a $5,000 loan over 24 months" icon="trending-up" variant="red" />
+
+At larger amounts and longer terms, the finance charge grows substantially.
 
 Use our [loan calculator](/calculator) to estimate the finance charge on any loan amount, APR, and term combination.
 
@@ -117,11 +132,17 @@ Finance charges apply to virtually every form of borrowing, but they work differ
 
 **Credit cards** have unpredictable finance charges because they depend on your balance, payment timing, and whether you carry a balance month to month. Paying your full statement balance each month results in zero finance charges. Carrying a balance means finance charges accrue daily.
 
-**Payday loans** have a simple finance charge structure — typically $10 to $30 per $100 borrowed. However, if you roll over the loan, a new finance charge is added each cycle. Three rollovers on a $500 payday loan at $15 per $100 turns a $75 finance charge into $300.
+**Payday loans** have a simple finance charge structure — typically $10 to $30 per $100 borrowed. However, if you roll over the loan, a new finance charge is added each cycle.
+
+<StatHighlight value="4x" label="How fast payday finance charges multiply — 3 rollovers on a $500 loan turns a $75 fee into $300" icon="warning" variant="red" />
 
 ## How to Minimize Your Finance Charge
 
 Every dollar you save on the finance charge is a dollar that stays in your pocket. Here are five strategies that work.
+
+<Callout type="tip" title="The #1 Way to Reduce Your Finance Charge">
+Shop around and get the lowest APR you can. Even a few percentage points can save you hundreds of dollars on the same loan.
+</Callout>
 
 **Get a lower APR.** This is the single most effective way to reduce your finance charge. Shop around — compare at least three to five offers. Even a few percentage points can save you hundreds of dollars. Use [FundingZest](/apply) to see pre-qualified offers from multiple lenders with one application.
 

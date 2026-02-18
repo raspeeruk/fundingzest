@@ -29,6 +29,13 @@ faqs:
     answer: "Yes, but options are limited. FHA loans accept scores as low as 580 (with 3.5% down) or even 500 (with 10% down). Conventional mortgages typically require 620+. With a 620 score, expect higher interest rates than someone with a 740+ score, which can add tens of thousands to your total mortgage cost."
 ---
 
+<StatsGrid title="Credit Score Snapshot" stats={[
+  { value: "670+", label: "FICO score considered 'Good' — access to most mainstream products", icon: "check" },
+  { value: "715", label: "Average FICO score in the United States", icon: "chart" },
+  { value: "$4,588", label: "Extra interest paid by poor-credit vs exceptional-credit borrowers on a $10K loan", icon: "dollar" },
+  { value: "65%", label: "Of your FICO score determined by payment history + utilization alone", icon: "percent" }
+]} />
+
 Your credit score is a three-digit number that lenders use to judge how risky it is to lend you money. It influences whether you get approved for a loan, what interest rate you pay, and how much that loan ultimately costs you. A difference of just 50 points can mean thousands of dollars saved or lost over the life of a loan.
 
 But what actually counts as a "good" credit score? The answer depends on which scoring model you look at, what type of credit you are applying for, and what terms you want to qualify for. This guide breaks down exactly where the ranges fall, how the two major scoring models compare, and what your score means for your wallet.
@@ -94,7 +101,7 @@ This is where your credit score stops being an abstract number and starts hittin
 | Fair (580-669) | 25% | $397 | $4,282 | $14,282 |
 | Poor (below 580) | 36% | $445 | $5,856 | $15,856 |
 
-Read those numbers carefully. The borrower with poor credit pays **$4,588 more in interest** than the borrower with exceptional credit on the exact same $10,000 loan. That is nearly half the original loan amount lost to interest charges alone.
+<StatHighlight value="$4,588" label="Extra interest paid by a poor-credit borrower vs exceptional credit on the same $10,000 loan — nearly half the loan amount lost to interest" icon="dollar" variant="red" />
 
 This cost difference compounds with larger loans and longer terms. On a $250,000 mortgage over 30 years, the spread between an excellent and a fair credit score can exceed $100,000 in additional interest. Your credit score is not just a number. It is a price tag on every dollar you borrow.
 
@@ -112,7 +119,9 @@ Your FICO score is calculated from five categories of information in your credit
 | Credit Mix | 10% | Having a variety of account types, including credit cards, installment loans, a mortgage, and retail accounts. A diverse mix shows you can manage different types of credit responsibly. |
 | New Credit Inquiries | 10% | How many new accounts you have opened recently and how many hard inquiries appear on your report. Multiple applications in a short period can signal financial distress to lenders. |
 
-**Payment history and credit utilization together account for 65% of your score.** If you focus on just two things, make them paying every bill on time and keeping your credit card balances low relative to their limits.
+<Callout type="tip" title="Focus on What Matters Most">
+Payment history and credit utilization together account for **65% of your FICO score**. If you focus on just two things, make them paying every bill on time and keeping your credit card balances low relative to their limits.
+</Callout>
 
 ## Credit Score by Age
 
@@ -139,7 +148,11 @@ You are entitled to check your credit reports for free, and several services let
 - **Credit Karma and Credit Sesame** — Free services that show your VantageScore and provide credit monitoring. Keep in mind these show VantageScore, not FICO.
 - **The Consumer Financial Protection Bureau** — The [CFPB offers free resources](https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/) to help you understand your credit reports and dispute errors.
 
-Checking your own credit score is a "soft inquiry" and does **not** affect your score. You can check as often as you like without penalty. For a deeper walkthrough of how and where to check, read our guide on [how to check your credit score for free](/guides/how-to-check-credit-score-free).
+<Callout type="info" title="Checking Your Score Won't Hurt It">
+Checking your own credit score is a "soft inquiry" and does **not** affect your score. You can check as often as you like without penalty.
+</Callout>
+
+For a deeper walkthrough of how and where to check, read our guide on [how to check your credit score for free](/guides/how-to-check-credit-score-free).
 
 ## How to Improve Your Score
 
@@ -149,6 +162,8 @@ Here are the highest-impact actions you can take:
 
 - **Pay every bill on time.** Set up autopay for at least the minimum payment on every account. Payment history is 35% of your score, and even one missed payment can cause significant damage.
 - **Reduce your credit utilization.** Pay down credit card balances to get your utilization below 30%. If possible, aim for below 10%. This is 30% of your score and one of the fastest factors to improve.
+<StatHighlight value="1 in 5" label="Credit reports contain an error according to FTC research — check yours for free" icon="warning" variant="red" />
+
 - **Check your credit report for errors.** Approximately 1 in 5 credit reports contains an error, according to FTC research. Dispute inaccuracies with the credit bureaus, especially incorrect late payments, wrong balances, or accounts that do not belong to you.
 - **Keep old accounts open.** Even if you no longer use a credit card, keeping it open preserves your credit history length and available credit limit, both of which help your score.
 - **Limit new applications.** Each hard inquiry can temporarily lower your score by a few points. Space out credit applications and only apply when you genuinely need new credit.

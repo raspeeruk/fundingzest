@@ -29,13 +29,22 @@ faqs:
     answer: "Yes. Medical bills are frequently negotiable. Start by requesting an itemized bill and checking for errors — billing mistakes are common. Then ask the provider for a discount for paying in cash or in full, request the Medicare rate instead of the chargemaster rate, or propose a lower lump-sum settlement. Many providers will reduce a bill by 20% to 50% rather than risk sending it to collections where they recover even less."
 ---
 
+<StatsGrid title="Medical Bills: Key Facts" stats={[
+  { value: "80%", label: "Of medical bills contain errors, per industry auditing data", icon: "warning" },
+  { value: "1 Year", label: "Grace period before unpaid medical debt appears on credit reports", icon: "clock" },
+  { value: "$500", label: "Unpaid medical debt under this amount is excluded from credit reports", icon: "shield" },
+  { value: "30-50%", label: "Typical discount achievable by negotiating medical bills directly", icon: "trending-down" }
+]} />
+
 An unexpected medical bill can feel like a financial emergency, and the pressure to pay quickly can push people toward borrowing options that make the situation worse. Before you sign a loan agreement or open a medical credit card, it is worth understanding every option available — because the best choice for medical debt is often not a loan at all.
 
 This guide covers what to do before borrowing, how each financing option actually works, and where to find assistance programs that could reduce or eliminate your bill entirely.
 
 ## Before You Borrow: Steps That Could Save You Thousands
 
-Roughly 80% of medical bills contain errors, according to industry auditing data. Before you commit to any repayment strategy, work through these steps in order. Each one can reduce or eliminate the amount you ultimately need to pay.
+<StatHighlight value="80%" label="of medical bills contain errors — always request an itemized statement before paying" icon="warning" variant="red" />
+
+Before you commit to any repayment strategy, work through these steps in order. Each one can reduce or eliminate the amount you ultimately need to pay.
 
 ### Step 1: Request an Itemized Bill and Check for Errors
 
@@ -139,6 +148,10 @@ These cards typically offer a **promotional zero-interest period** of 6, 12, 18,
 
 ### The Deferred Interest Trap
 
+<Callout type="cost" title="Deferred Interest Is Not the Same as Zero Interest">
+If any balance remains when a promotional period ends, deferred interest charges you **retroactive interest on the entire original amount** — not just the remaining balance. A $500 remaining balance on a $4,000 charge could trigger $800+ in retroactive interest at 26%+ APR.
+</Callout>
+
 Deferred interest is fundamentally different from a standard zero-interest promotion. Here is how it works:
 
 - You charge $4,000 for a medical procedure with a 12-month promotional period.
@@ -194,7 +207,9 @@ Credit reporting rules for medical debt changed significantly in recent years, a
 
 These rules give you meaningful breathing room. A medical bill that goes to collections today will not affect your credit for at least a year — and if the balance is under $500 or you pay it before the year is up, it will not appear at all.
 
-> **Key takeaway:** Do not rush into a high-interest loan out of fear that a medical bill will immediately destroy your credit. You likely have more time than you think.
+<Callout type="info" title="You Have More Time Than You Think">
+Do not rush into a high-interest loan out of fear that a medical bill will immediately destroy your credit. Paid medical collections no longer appear on credit reports, debt under $500 is excluded entirely, and unpaid debt has a **one-year grace period** before it shows up. Use that time to negotiate, apply for assistance, or arrange a zero-interest payment plan.
+</Callout>
 
 ## Comparison: Medical Bill Payment Options at a Glance
 
@@ -205,6 +220,11 @@ These rules give you meaningful breathing room. A medical bill that goes to coll
 | **Medical credit card** | 0% promo, then 26%+ | 6–24 months promo | Yes | Patients confident they can pay in full during promo |
 | **Payday loan** | 400%+ APR | 2–4 weeks | No | **Not recommended for medical debt** |
 | **Financial assistance** | Free | N/A | No | Low-to-moderate income patients |
+
+<ComparisonRow title="Hospital Payment Plan vs Payday Loan for Medical Debt" options={[
+  { title: "Hospital Payment Plan", variant: "green", recommended: true, stats: [{ label: "Interest", value: "0%" }, { label: "Term", value: "6-24 mo" }, { label: "Credit Check", value: "No" }] },
+  { title: "Payday Loan", variant: "red", stats: [{ label: "APR", value: "400%+" }, { label: "Term", value: "2-4 wks" }, { label: "Credit Check", value: "No" }] }
+]} />
 
 ## How to Compare Loan Offers for Medical Bills
 

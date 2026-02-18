@@ -29,6 +29,13 @@ faqs:
     answer: "Yes. Under federal law, you have the right to revoke ACH authorization at any time by contacting your bank at least 3 business days before the next scheduled withdrawal. This doesn't eliminate the debt, but it stops automatic debits. Contact the lender as well to arrange alternative payment."
 ---
 
+<StatsGrid title="Key Numbers to Know" stats={[
+  { value: "25%", label: "Maximum wage garnishment allowed under federal law", icon: "shield" },
+  { value: "10", label: "Average payday loans per year per borrower (CFPB)", icon: "warning" },
+  { value: "30-50%", label: "Typical settlement range when negotiating with collectors", icon: "dollar" },
+  { value: "3 days", label: "Notice to bank required to revoke ACH authorization", icon: "clock" }
+]} />
+
 Falling behind on a loan payment is one of the most stressful financial situations you can face. The anxiety compounds — late fees pile up, collection calls start, and the problem feels like it's spiraling out of control. But here is the truth: this is fixable. People recover from missed payments, defaults, and even collections every day. The key variable is how quickly you take action.
 
 The worst thing you can do is nothing. Ignoring a missed payment guarantees the situation will get worse. Every day you wait, your options narrow and the costs increase. Conversely, the sooner you act, the more leverage you have, the more options are available, and the less damage you'll sustain. This guide gives you a concrete, step-by-step plan for handling loan repayment trouble — whether you're behind on a payday loan, an installment loan, a credit card, or any other debt.
@@ -69,7 +76,11 @@ When you owe money, it can feel like the lender or collector holds all the power
 - Misrepresent the amount you owe
 - Contact you at all if you send a written cease-communication request
 
-**You cannot go to jail for failing to pay a debt.** This is worth repeating because aggressive collectors sometimes imply otherwise. Debtor's prisons were abolished in the United States in 1833. Unpaid debt is a civil matter, not a criminal one.
+<Callout type="info" title="You Cannot Go to Jail for Unpaid Debt">
+Debtor's prisons were abolished in the United States in 1833. Unpaid debt is a civil matter, not a criminal one. If a collector implies otherwise, they are violating the law.
+</Callout>
+
+**You cannot go to jail for failing to pay a debt.** This is worth repeating because aggressive collectors sometimes imply otherwise.
 
 ### Wage Garnishment Limits
 
@@ -107,6 +118,11 @@ Your best course of action depends on what type of loan you're struggling with. 
 ### Payday Loans
 
 Payday loans are the most time-sensitive because they come due in full within 2 to 4 weeks, and most lenders have ACH authorization to debit your bank account automatically.
+
+<ComparisonRow title="Payday Loan: Rollover vs Extended Payment Plan" options={[
+  { title: "Rollover (Don't Do This)", variant: "red", stats: [{ label: "New fees each cycle", value: "Yes" }, { label: "Breaks debt cycle", value: "No" }, { label: "Additional cost", value: "$75+" }] },
+  { title: "Extended Payment Plan (EPP)", variant: "green", recommended: true, stats: [{ label: "New fees each cycle", value: "No" }, { label: "Breaks debt cycle", value: "Yes" }, { label: "Additional cost", value: "$0" }] }
+]} />
 
 **Your options:**
 
@@ -185,9 +201,15 @@ When you're under financial pressure, bad options can look appealing. Avoid thes
 
 **Don't ignore the problem.** A $500 debt with a $50 late fee becomes a $500 debt in collections with attorney fees and a lawsuit. The longer you wait, the more it costs.
 
-**Don't take out another payday loan to pay the first one.** This is the debt trap. You'll owe more than you started with and still face the same problem in 2 weeks. The Consumer Financial Protection Bureau found that the average payday borrower takes out 10 loans per year — because of this exact cycle.
+<StatHighlight value="10 loans/year" label="Average payday loans taken per borrower (CFPB) — the result of the rollover debt trap" icon="warning" variant="red" />
 
-**Don't pay a "credit repair" company.** Companies that charge upfront fees to fix your credit cannot do anything you cannot do yourself for free. Many are outright scams. The CFPB and NFCC provide legitimate, free resources.
+**Don't take out another payday loan to pay the first one.** This is the debt trap. You'll owe more than you started with and still face the same problem in 2 weeks.
+
+<Callout type="cost" title="Avoid Paid Credit Repair Companies">
+Companies that charge upfront fees to "fix your credit" cannot do anything you cannot do yourself for free. Many are outright scams. The CFPB and NFCC provide legitimate, free resources.
+</Callout>
+
+**Don't pay a "credit repair" company.**
 
 **Don't give collectors direct access to your bank account.** If a collector asks for your bank account or routing number over the phone, decline. Pay by cashier's check, money order, or through a secure online portal where you control the transaction.
 

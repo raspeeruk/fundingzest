@@ -27,6 +27,13 @@ faqs:
     answer: "Compare scenarios: try different APRs (shop for the lowest), different terms (shorter = less total interest), and different amounts (borrow only what you need). The biggest savings usually come from getting a lower APR through better credit or choosing a different lender."
 ---
 
+<StatsGrid title="Loan Calculator at a Glance" stats={[
+  { value: "3", label: "Inputs needed: amount, APR, and term", icon: "info" },
+  { value: "24x", label: "More interest at 400% vs 15% APR on the same loan", icon: "trending-up" },
+  { value: "$620", label: "Extra interest cost choosing a 24-month vs 6-month term", icon: "dollar" },
+  { value: "30s", label: "Time to run a loan calculation", icon: "clock" }
+]} />
+
 ## What Is a Loan Calculator?
 
 A loan calculator is a tool that takes three numbers — the amount you want to borrow, the annual percentage rate (APR), and the repayment term — and shows you exactly what that loan will cost. Specifically, it tells you your **monthly payment**, your **total cost** (principal plus all interest), and how much of what you pay is **pure interest** (the cost of borrowing).
@@ -108,7 +115,9 @@ This is the most important comparison. It shows how dramatically APR affects the
 | 200% | $167 | $2,003 | $1,003 |
 | 400% | $248 | $2,973 | $1,973 |
 
-At 15% APR, borrowing $1,000 costs you $83 in interest. At 400% APR, the same $1,000 costs you $1,973 — nearly **24 times more interest** for the same amount of money. The monthly payment difference between 15% and 24% is only $4, but the total interest difference is $51. At the extreme end, a 400% APR loan costs almost double the original loan amount in interest alone.
+<StatHighlight value="24x" label="more interest at 400% APR vs 15% APR on the same $1,000 loan ($1,973 vs $83)" icon="warning" variant="red" />
+
+At 15% APR, borrowing $1,000 costs you $83 in interest. At 400% APR, the same $1,000 costs you $1,973. The monthly payment difference between 15% and 24% is only $4, but the total interest difference is $51. At the extreme end, a 400% APR loan costs almost double the original loan amount in interest alone.
 
 This is why shopping for the lowest available APR is the single most effective way to reduce your borrowing costs. For strategies on finding lower rates, see our guide on [how to compare loan offers](/guides/how-to-compare-loan-offers).
 
@@ -148,6 +157,10 @@ The interest costs are roughly proportional: borrow twice as much, pay roughly t
 
 Even with a calculator in front of them, borrowers frequently make these errors.
 
+<Callout type="warning" title="Don't Confuse Interest Rate With APR">
+The most common calculator mistake is entering the interest rate instead of the APR. The APR includes mandatory fees the interest rate does not. Always use the APR for accurate results.
+</Callout>
+
 ### Using Interest Rate Instead of APR
 
 The interest rate and the APR are not the same number. The APR includes mandatory fees (like origination fees) that the interest rate does not. If you enter the interest rate instead of the APR, the calculator will underestimate your actual cost. Always use the APR — it is the number that reflects the full annual cost of borrowing. For a complete breakdown, read our guide on [APR vs interest rate](/guides/apr-vs-interest-rate).
@@ -180,9 +193,18 @@ Payday lenders often quote fees as a dollar amount per $100 borrowed rather than
 
 This is one of the most valuable comparisons. Suppose you need $500. A payday lender charges $15 per $100 for 14 days ($75 fee, $575 due in two weeks). An installment lender offers $500 at 36% APR for 6 months. Enter $500 at 36% APR for 6 months into the calculator: you get approximately $86 per month, $516 total, $54 in interest.
 
+<ComparisonRow title="$500 Borrowed: Payday Loan vs Installment Loan" options={[
+  { title: "Payday Loan", variant: "red", stats: [{ label: "APR", value: "391%" }, { label: "Total Cost", value: "$75 fee" }, { label: "Due", value: "14 days" }] },
+  { title: "Installment Loan", variant: "green", recommended: true, stats: [{ label: "APR", value: "36%" }, { label: "Total Interest", value: "$54" }, { label: "Term", value: "6 months" }] }
+]} />
+
 The payday loan costs $75 for two weeks. The installment loan costs $54 over six months — and gives you six months of manageable monthly payments instead of a $575 lump sum due in 14 days. If the payday loan gets rolled over even once, it costs $150 — nearly three times the installment loan's total interest. Use the calculator to see these differences in dollars, not just percentages.
 
 For more on this comparison, see our guide on [payday loans vs. installment loans](/guides/payday-loans-vs-installment-loans).
+
+<Callout type="tip" title="Run Multiple Scenarios">
+The real power of a loan calculator comes from comparison. Run at least 5 to 10 scenarios — change one variable at a time (APR, term, or amount) to find the combination that costs the least in total interest while fitting your monthly budget.
+</Callout>
 
 ## Try It Yourself
 

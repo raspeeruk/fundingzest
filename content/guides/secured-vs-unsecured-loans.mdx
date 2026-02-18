@@ -29,6 +29,13 @@ faqs:
     answer: "Secured loans almost always have lower interest rates than unsecured loans of the same amount and term. For example, a secured personal loan might have an APR of 5-15%, while an equivalent unsecured loan might be 10-36%. The collateral reduces lender risk, which translates to savings for you."
 ---
 
+<StatsGrid title="Secured vs Unsecured at a Glance" stats={[
+  { value: "3-20%", label: "Typical APR for secured loans", icon: "shield" },
+  { value: "6-36%", label: "Typical APR for unsecured loans", icon: "trending-up" },
+  { value: "$1,200+", label: "Interest saved with secured vs unsecured (poor credit, $5K loan)", icon: "dollar" },
+  { value: "391%", label: "Payday loan APR — unsecured but extremely costly", icon: "warning" }
+]} />
+
 When you borrow money, the loan will fall into one of two broad categories: secured or unsecured. This single distinction — whether collateral is involved — shapes everything about the loan: the interest rate you pay, the amount you can borrow, the approval requirements, and what happens if you cannot repay. Understanding the difference is essential for making an informed borrowing decision.
 
 This guide breaks down how each type works, compares costs and risks side by side, and helps you determine which option fits your financial situation.
@@ -151,6 +158,11 @@ Consider a $5,000 loan with a 36-month term:
 | Secured loan, poor credit          | 15%  | $173.33         | $1,239.88      | $6,239.88    |
 | Unsecured loan, poor credit        | 30%  | $207.53         | $2,471.08      | $7,471.08    |
 
+<ComparisonRow title="$5,000 Loan with Poor Credit: Secured vs Unsecured" options={[
+  { title: "Secured Loan", variant: "green", recommended: true, stats: [{ label: "APR", value: "15%" }, { label: "Monthly Payment", value: "$173" }, { label: "Total Interest", value: "$1,240" }] },
+  { title: "Unsecured Loan", variant: "red", stats: [{ label: "APR", value: "30%" }, { label: "Monthly Payment", value: "$208" }, { label: "Total Interest", value: "$2,471" }] }
+]} />
+
 For a borrower with poor credit, choosing a secured loan over an unsecured one saves over **$1,200** in interest on a $5,000 loan. That is a meaningful difference.
 
 Use our [loan calculator](/calculator) to estimate your own payments based on your expected rate and term.
@@ -160,6 +172,10 @@ Use our [loan calculator](/calculator) to estimate your own payments based on yo
 Neither secured nor unsecured loans are risk-free. Understanding the specific risks of each helps you make a more informed decision.
 
 ### Risks of Secured Loans
+
+<Callout type="cost" title="Default Risk: You Can Lose Your Asset">
+If you default on a secured loan, the lender can seize your car, home, or savings. Repossession and foreclosure are reported to credit bureaus and can devastate your credit score for years.
+</Callout>
 
 **Loss of collateral is the primary risk.** If you cannot make payments, the lender can seize your pledged asset. This means:
 
@@ -216,7 +232,13 @@ A typical payday loan works like this: you borrow $100-$1,000 and agree to repay
 
 While payday loans require no collateral in the traditional sense, the lender's direct access to your bank account creates a similar dynamic. If you cannot repay, the lender withdraws the amount directly, which can trigger overdraft fees and cascade into further financial problems.
 
+<StatHighlight value="391%" label="APR on a typical payday loan — far more expensive than any secured or unsecured personal loan" icon="warning" variant="red" />
+
 **The cost is staggering.** A $15 fee per $100 borrowed on a two-week payday loan translates to an APR of approximately **391%**. This makes payday loans one of the most expensive borrowing methods available — far more expensive than either secured or unsecured personal loans.
+
+<Callout type="tip" title="Almost Always a Better Option">
+Even for borrowers with bad credit, unsecured personal loans at 25-36% APR or credit union PALs capped at 28% APR are dramatically cheaper than payday loans at 391% APR. Explore alternatives before considering payday lending.
+</Callout>
 
 **When payday loans make sense (rarely):** In a genuine one-time emergency where you have no other options, a single payday loan that you can fully repay on time may be preferable to bouncing a check, missing a critical bill, or losing essential services. But this scenario is uncommon, and alternatives almost always exist.
 

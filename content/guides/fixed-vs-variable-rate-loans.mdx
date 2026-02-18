@@ -27,6 +27,13 @@ faqs:
     answer: "Most variable rate loans have a rate cap (maximum rate) stated in the loan agreement. For personal lines of credit, caps are typically 18-29%. For adjustable-rate mortgages, caps limit increases per adjustment period (usually 2% per year) and over the life of the loan (usually 5-6% above the starting rate). Always check the cap before accepting."
 ---
 
+<StatsGrid title="Fixed vs Variable Rate: Key Numbers" stats={[
+  { value: "$175", label: "Extra cost from a 2% rate increase on a $5K loan", icon: "trending-up" },
+  { value: "$495", label: "Total interest on $3K at 15% fixed / 24 months", icon: "dollar" },
+  { value: "2%", label: "Typical periodic rate cap per adjustment", icon: "shield" },
+  { value: "5–6%", label: "Common lifetime cap above starting rate", icon: "percent" }
+]} />
+
 Every loan comes with an interest rate, and that rate is either fixed or variable. This single distinction determines whether your monthly payment stays the same for the life of the loan or fluctuates with market conditions. Getting this decision right affects your budget, your total cost, and your financial peace of mind.
 
 This guide explains how each rate type works, when each makes sense, and what to look for when comparing offers.
@@ -44,6 +51,11 @@ Before going deeper, here is a side-by-side comparison of the two rate types:
 | **Risk level** | Lower — no surprises | Higher — payments can increase |
 | **Best for** | Budget certainty, longer terms, rising-rate environments | Short repayment periods, falling-rate environments, risk-tolerant borrowers |
 | **Common loan types** | Personal installment loans, auto loans, fixed-rate mortgages | Credit cards, HELOCs, adjustable-rate mortgages, personal lines of credit |
+
+<ComparisonRow title="Fixed vs Variable Rate" options={[
+  { title: "Fixed Rate", variant: "green", recommended: true, stats: [{ label: "Payment", value: "Never changes" }, { label: "Risk", value: "Lower" }, { label: "Best for", value: "Most borrowers" }] },
+  { title: "Variable Rate", variant: "red", stats: [{ label: "Payment", value: "Can fluctuate" }, { label: "Risk", value: "Higher" }, { label: "Best for", value: "Short-term loans" }] }
+]} />
 
 Neither type is universally better. The right choice depends on your financial situation, how long you plan to carry the debt, and how much payment variability you can absorb.
 
@@ -126,6 +138,8 @@ Understanding the abstract concept of rate changes is one thing. Seeing the doll
 | **After 2% increase** | 14.00% | $170.93 | $1,153.48 | $6,153.48 |
 | **Difference** | +2.00% | **+$4.86/month** | **+$174.96** | **+$174.96** |
 
+<StatHighlight value="+$175" label="Total extra cost from just a 2% rate increase on a $5,000 loan" icon="trending-up" variant="red" />
+
 A 2% increase adds nearly $5 per month to your payment and costs an additional $175 over the life of the loan. On a $5,000 loan, that is meaningful but manageable. On a $25,000 loan, the same 2% increase adds approximately $25 per month and $875 in total interest. On a $200,000 mortgage, the numbers become dramatically larger.
 
 The impact scales with the loan amount. The larger the balance and the longer the remaining term, the more a rate increase costs you.
@@ -155,7 +169,15 @@ Before accepting any variable-rate loan, ask the lender these specific questions
 - How often does the rate adjust (monthly, quarterly, annually)?
 - What benchmark rate is used, and where can I track it?
 
+<Callout type="warning" title="Always Ask About Rate Caps">
+Before accepting any variable-rate loan, confirm the periodic cap, lifetime cap, rate floor, adjustment frequency, and which benchmark rate is used. If the lender cannot answer these questions clearly, treat that as a red flag.
+</Callout>
+
 If the lender cannot answer these questions clearly, treat that as a red flag. Caps and adjustment terms should be explicitly stated in the loan agreement. The [Consumer Financial Protection Bureau](https://www.consumerfinance.gov/ask-cfpb/) provides resources on understanding adjustable-rate terms and your rights as a borrower.
+
+<Callout type="info" title="Good News for Personal Loan Shoppers">
+Most personal installment loans have fixed rates by default. The rate you are quoted is the rate you will pay for the entire loan term -- no surprises.
+</Callout>
 
 ## Most Personal Loans Are Fixed Rate
 

@@ -29,9 +29,18 @@ faqs:
     answer: "True emergencies are unexpected, necessary, and urgent. Examples: car repair needed to get to work, medical co-pay or prescription, emergency home repair (broken pipe, failed furnace), job loss expenses during the gap between paychecks. Non-emergencies: a sale on something you want, a vacation, holiday gifts, routine car maintenance, or any expense you could have anticipated and budgeted for."
 ---
 
+<StatsGrid title="Emergency Fund Reality Check" stats={[
+  { value: "56%", label: "Of Americans can't cover a $1,000 expense", icon: "warning" },
+  { value: "$500", label: "Starter emergency fund target", icon: "dollar" },
+  { value: "4-5%", label: "APY on high-yield savings accounts", icon: "trending-up" },
+  { value: "$219/mo", label: "Average spent on subscriptions", icon: "chart" }
+]} />
+
 ## Why an Emergency Fund Matters
 
-A 2024 Bankrate survey found that **56% of Americans cannot cover a $1,000 unexpected expense** from savings. When the car breaks down, a medical bill arrives, or work hours get cut, people without savings face a set of bad options: credit cards at 20-29% APR, payday loans at 391%+, borrowing from family, or simply not paying bills.
+<StatHighlight value="56%" label="of Americans cannot cover a $1,000 unexpected expense from savings" icon="warning" variant="red" />
+
+A 2024 Bankrate survey found that 56% of Americans cannot cover a $1,000 unexpected expense from savings. When the car breaks down, a medical bill arrives, or work hours get cut, people without savings face a set of bad options: credit cards at 20-29% APR, payday loans at 391%+, borrowing from family, or simply not paying bills.
 
 An emergency fund breaks that cycle. It is the financial buffer between an unexpected expense and a debt spiral.
 
@@ -95,6 +104,10 @@ A HYSA keeps your emergency fund:
 ### 1. Automate a Small, Fixed Amount
 
 Set up an automatic transfer of $10, $20, or $30 per week from your checking account to your HYSA. Schedule it for the day after payday so the money moves before you can allocate it elsewhere.
+
+<Callout type="tip" title="Start Small, Stay Consistent">
+The amount matters less than the consistency. **$10 per week is $520 in a year** — a fully funded Starter emergency fund. Automate the transfer so it happens before you can spend it.
+</Callout>
 
 The amount matters less than the consistency. $10 per week is $520 in a year — a fully funded Starter emergency fund.
 
@@ -211,13 +224,20 @@ An emergency fund only works if you use it for actual emergencies. Every non-eme
 - Covering overspending in another budget category
 - Anything you could have anticipated and planned for
 
-**The test:** Is this expense unexpected, necessary, and urgent? If it fails any of those three criteria, it is not an emergency.
+<Callout type="info" title="The Emergency Test">
+Is this expense **unexpected**, **necessary**, and **urgent**? If it fails any of those three criteria, it is not an emergency.
+</Callout>
 
 When you do use the fund, make rebuilding it a top priority. Pause non-essential spending and redirect money back to savings until the balance is restored.
 
 ## How an Emergency Fund Replaces Payday Loans
 
 Payday loans exist because people need money between paychecks to cover unexpected expenses. An emergency fund serves the same function — at a cost of $0.
+
+<ComparisonRow title="$400 Car Repair: Emergency Fund vs. Payday Loan" options={[
+  { title: "Payday Loan", variant: "red", stats: [{ label: "Fee", value: "$60-$120" }, { label: "APR", value: "391%+" }] },
+  { title: "Emergency Fund", variant: "green", recommended: true, stats: [{ label: "Cost", value: "$1.50" }, { label: "APR", value: "0%" }] }
+]} />
 
 ### Cost Comparison
 

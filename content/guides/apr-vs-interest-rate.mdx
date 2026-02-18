@@ -29,6 +29,13 @@ faqs:
     answer: "Only if you have a variable-rate loan. Fixed-rate loans (most personal loans) lock in your APR for the entire term. Variable-rate loans (some lines of credit, adjustable-rate mortgages) can change based on market rates. Always check whether your APR is fixed or variable before accepting."
 ---
 
+<StatsGrid title="APR vs Interest Rate: Key Numbers" stats={[
+  { value: "391%", label: "APR on a typical $500 payday loan ($15 per $100 fee)", icon: "percent" },
+  { value: "$202", label: "Potential savings by comparing APR instead of interest rate alone", icon: "dollar" },
+  { value: "80%", label: "Of payday loans rolled over or reborrowed within 14 days", icon: "warning" },
+  { value: "1968", label: "Year the Truth in Lending Act began requiring APR disclosure", icon: "shield" }
+]} />
+
 ## The Simple Explanation
 
 When you borrow money, two numbers describe the cost: the **interest rate** and the **APR**. They sound like they should mean the same thing, but they do not — and confusing them can lead you to choose a more expensive loan.
@@ -100,12 +107,19 @@ This is where the distinction saves you money. Consider two loan offers for a $5
 | Total repaid | $5,760 | $5,808 |
 | **Total cost of borrowing** | **$760** | **$558** |
 
+<ComparisonRow title="Which Loan Is Actually Cheaper?" options={[
+  { title: "Loan A", variant: "red", stats: [{ label: "Interest Rate", value: "12%" }, { label: "APR", value: "17.3%" }, { label: "Total Cost", value: "$760" }] },
+  { title: "Loan B", variant: "green", recommended: true, stats: [{ label: "Interest Rate", value: "15%" }, { label: "APR", value: "15.0%" }, { label: "Total Cost", value: "$558" }] }
+]} />
+
 If you compared interest rates alone, Loan A (12%) looks cheaper than Loan B (15%). But Loan A has a 5% origination fee that Loan B does not. When you factor in the fee:
 
 - Loan A costs $760 to borrow $4,750 in actual cash
 - Loan B costs $558 to borrow $5,000 in actual cash
 
-**Loan B is cheaper by $202** despite having the higher interest rate. The APR captures this because it rolls the origination fee into the annualized percentage. The interest rate misses it entirely.
+<StatHighlight value="$202" label="saved by choosing the loan with the lower APR — even though it had the higher interest rate" icon="dollar" variant="green" />
+
+The APR captures this because it rolls the origination fee into the annualized percentage. The interest rate misses it entirely.
 
 This is the core reason APR exists: to prevent lenders from advertising a low interest rate while burying the true cost in fees. When you compare APRs, fees cannot hide.
 
@@ -133,6 +147,8 @@ Payday loan APRs deserve special attention because they confuse borrowers more t
 A typical payday loan charges $15 per $100 borrowed for a 14-day term. On a $500 loan, that is a $75 fee — you borrow $500 and repay $575 in two weeks. The fee is 15% of the loan amount for 14 days. When you annualize that cost using the standard APR formula:
 
 ($75 / $500) x (365 / 14) x 100 = **391% APR**
+
+<StatHighlight value="391%" label="annualized APR on a typical two-week payday loan charging $15 per $100" icon="percent" variant="red" />
 
 That number sounds alarming. But here is the important context: you do not actually pay 391% of the loan amount. You pay $75. The APR is high because it annualizes a short-term fee over a full year — a period 26 times longer than the actual loan term. It is mathematically equivalent to quoting a hotel room's daily rate as a yearly rent.
 
@@ -171,6 +187,10 @@ Variable APRs are common on credit cards, home equity lines of credit (HELOCs), 
 For most borrowers, especially those on a tight budget, **fixed APR is the safer choice.** The predictability of a fixed payment makes budgeting easier and eliminates the risk of payment shock. If you are comparing a fixed-rate offer at 18% against a variable-rate offer starting at 15%, the fixed rate may cost slightly more initially but protects you from potential rate increases of several percentage points.
 
 Always check whether the APR on any loan offer is fixed or variable before signing. This information is required in the loan disclosure and should be clearly stated on the first page of the agreement.
+
+<Callout type="tip" title="Fixed vs Variable: Quick Rule of Thumb">
+If you are on a tight budget and need predictable payments, **choose a fixed APR** every time. Variable rates may start lower, but the risk of rising payments can strain your finances when you can least afford it.
+</Callout>
 
 ## How to Use APR to Compare Loans
 
@@ -217,7 +237,9 @@ The disclosure must include:
 
 These four numbers together give you a complete picture of the loan's cost. They must be presented clearly and conspicuously — not buried in fine print.
 
-**If a lender refuses to disclose the APR or provides confusing, contradictory information about the cost of the loan, do not proceed.** Legitimate lenders comply with TILA readily. Reluctance to disclose is one of the strongest indicators of a predatory lender. For more warning signs, see our guide on [how to avoid predatory lenders](/guides/how-to-avoid-predatory-lenders).
+<Callout type="warning" title="Red Flag: No APR Disclosure">
+If a lender refuses to disclose the APR or provides confusing, contradictory information about the cost of the loan, **do not proceed**. Legitimate lenders comply with TILA readily. Reluctance to disclose is one of the strongest indicators of a predatory lender. For more warning signs, see our guide on [how to avoid predatory lenders](/guides/how-to-avoid-predatory-lenders).
+</Callout>
 
 ## Compare APRs Now
 

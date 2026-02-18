@@ -29,6 +29,13 @@ faqs:
     answer: "You can dispute unauthorized hard inquiries — those you did not initiate or consent to. If a company pulled your credit without your permission, file a dispute with the credit bureau. Legitimate hard inquiries that you authorized cannot be removed early; they will fall off after 2 years."
 ---
 
+<StatsGrid title="Credit Inquiries at a Glance" stats={[
+  { value: "5-10", label: "Points lost per hard inquiry", icon: "trending-down" },
+  { value: "0", label: "Points lost from soft inquiries", icon: "check" },
+  { value: "2 yrs", label: "Hard inquiries stay on your report", icon: "clock" },
+  { value: "14-45 days", label: "Rate shopping window (counts as one inquiry)", icon: "shield" }
+]} />
+
 Every time someone checks your credit, it is recorded on your credit report as an inquiry. But not all inquiries are created equal. Some have zero effect on your credit score, while others can temporarily lower it. Understanding the difference between soft and hard credit inquiries — and knowing how to manage them — is essential for anyone who wants to protect their score while shopping for the best loan rates.
 
 This guide explains what each type of inquiry is, how they affect your score, and how to minimize unnecessary hard pulls when you are ready to borrow.
@@ -107,6 +114,11 @@ A single hard inquiry typically reduces your credit score by **5 to 10 points**.
 
 ### The Impact Is Temporary
 
+<ComparisonRow title="Hard Inquiry vs Late Payment: Impact on Your Score" options={[
+  { title: "Hard Inquiry", variant: "green", stats: [{ label: "Score Drop", value: "5-10 pts" }, { label: "Scoring Impact", value: "12 months" }, { label: "On Report", value: "2 years" }] },
+  { title: "Late Payment", variant: "red", stats: [{ label: "Score Drop", value: "60-110 pts" }, { label: "Scoring Impact", value: "Years" }, { label: "On Report", value: "7 years" }] }
+]} />
+
 Hard inquiries are the least damaging of all negative credit events. Compared to a late payment (which can drop your score 60-110 points and stay on your report for 7 years) or a collection (50-110 point drop, 7 years on report), a hard inquiry's 5-10 point impact for 12 months is relatively minor. The concern is not about one inquiry — it is about accumulating too many in a short period.
 
 ## Rate Shopping Protection
@@ -141,6 +153,8 @@ For more on how interest rates affect loan costs, understanding [what makes a go
 
 ## How Many Hard Inquiries Are Too Many?
 
+<StatHighlight value="6+" label="hard inquiries in 12 months is generally considered a red flag by lenders" icon="warning" variant="red" />
+
 There is no official cutoff — scoring models do not have a bright line that says "this many inquiries is too many." However, as a practical guideline, **six or more hard inquiries in 12 months** is generally considered a red flag by lenders.
 
 ### The Lender Perspective
@@ -161,6 +175,10 @@ The effect of multiple inquiries depends heavily on the rest of your credit prof
 
 Protecting your credit score from unnecessary hard inquiries is straightforward with a few smart habits.
 
+<Callout type="tip" title="Use Pre-Qualification Tools First">
+Many lenders and platforms like FundingZest let you see estimated rates with only a **soft pull** that has zero impact on your score. Only proceed to a full application (hard pull) once you have identified the best offer.
+</Callout>
+
 **Use pre-qualification tools.** Many lenders offer pre-qualification or pre-approval checks that use a soft pull. This lets you see estimated rates and terms without affecting your score. Only proceed to a full application (which triggers the hard pull) once you have identified the best offer.
 
 **Rate shop within a narrow window.** As discussed above, keep all applications for the same loan type within a 14-day window to ensure they are bundled as a single inquiry.
@@ -174,6 +192,10 @@ Protecting your credit score from unnecessary hard inquiries is straightforward 
 For strategies on building and protecting your overall credit health, see our guide on [how to improve your credit score](/guides/how-to-improve-credit-score).
 
 ## Does FundingZest Do a Hard Pull?
+
+<Callout type="info" title="FundingZest Uses Soft Inquiries Only">
+Submitting your information through FundingZest does **not** result in a hard credit inquiry. You can compare offers from multiple lenders with zero impact on your credit score.
+</Callout>
 
 **No.** Submitting your information through FundingZest does not result in a hard credit inquiry. When you use FundingZest to explore loan options, we collect basic information to match you with potential lenders — this process involves only a soft inquiry, which has zero impact on your credit score.
 

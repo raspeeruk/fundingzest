@@ -31,6 +31,13 @@ faqs:
     answer: "Closing a credit card usually hurts your score because it reduces your available credit (increasing utilization ratio) and can lower your average account age. Keep cards open even if you don't use them regularly, especially your oldest cards. The exception: if a card has a high annual fee and you can't justify the cost."
 ---
 
+<StatsGrid title="Credit Score Improvement: Key Numbers" stats={[
+  { value: "65%", label: "Of your FICO score comes from payment history + utilization", icon: "chart" },
+  { value: "1 in 4", label: "Credit reports contain errors that could affect scores (FTC)", icon: "warning" },
+  { value: "30 Days", label: "Time to see results from quick-win strategies", icon: "clock" },
+  { value: "$2,345", label: "Saved on a $5K loan by improving from 580 to 750", icon: "dollar" }
+]} />
+
 Improving your credit score is one of the most impactful things you can do for your financial health. A higher score unlocks lower interest rates, better loan terms, and easier approvals — saving you hundreds or even thousands of dollars. The good news is that credit improvement does not require a financial advisor or expensive credit repair services. With the right strategy, you can start seeing results in as little as 30 days.
 
 This guide lays out 10 proven steps, organized from the fastest quick wins to longer-term strategies that build lasting credit strength. Whether you are starting from a [poor credit score](/loans/bad-credit) or simply want to move from good to excellent, these steps work.
@@ -104,6 +111,8 @@ A single late payment removal can boost your score by 20 to 50 points or more, d
 Quick wins can move the needle fast, but lasting credit improvement requires consistent habits over time. These five strategies build the kind of credit history that keeps your score climbing month after month.
 
 ### 6. Set Up Autopay on All Accounts
+
+<StatHighlight value="60–110 pts" label="score drop from a single missed payment — the mark stays on your report for 7 years" icon="trending-down" variant="red" />
 
 Payment history is 35% of your score, making it the single most important factor. One missed payment can drop your score by 60 to 110 points, and that negative mark stays on your report for seven years. The simplest way to protect yourself is to automate every bill.
 
@@ -179,7 +188,9 @@ You cannot fix what you do not know about. Many people go years without checking
 
 ### Falling for Credit Repair Scams
 
-The [FTC](https://consumer.ftc.gov/credit-loans-and-debt) warns consumers about companies that charge upfront fees to "fix" or "clean up" your credit. These companies cannot do anything you cannot do for free yourself. Some use deceptive tactics that can make your situation worse. If a company guarantees a specific score increase or promises to remove accurate negative information, that is a scam.
+<Callout type="warning" title="Credit Repair Scams">
+The FTC warns consumers about companies that charge upfront fees to "fix" your credit. These companies cannot do anything you cannot do for free yourself. **If a company guarantees a specific score increase or promises to remove accurate negative information, it is a scam.** Use free resources like AnnualCreditReport.com and NFCC nonprofit counseling instead.
+</Callout>
 
 ## Free Tools and Resources
 
@@ -195,7 +206,12 @@ For a complete list of options, see our guide on [how to check your credit score
 
 ## How Your Score Affects Loan Costs
 
-Improving your credit score is not an abstract goal — it translates directly into real money saved. Here is how different credit scores affect the cost of a $5,000 personal loan with a 3-year repayment term:
+Improving your credit score is not an abstract goal — it translates directly into real money saved. <ComparisonRow title="$5,000 Loan: Excellent vs. Poor Credit" options={[
+  { title: "Poor Credit (580)", variant: "red", stats: [{ label: "APR", value: "35.99%" }, { label: "Monthly Payment", value: "$222" }, { label: "Total Interest", value: "$2,981" }] },
+  { title: "Excellent Credit (750+)", variant: "green", recommended: true, stats: [{ label: "APR", value: "7.99%" }, { label: "Monthly Payment", value: "$156" }, { label: "Total Interest", value: "$636" }] }
+]} />
+
+Here is how different credit scores affect the cost of a $5,000 personal loan with a 3-year repayment term:
 
 | Credit Score | Estimated APR | Monthly Payment | Total Interest Paid | Savings vs. 580 Score |
 |---|---|---|---|---|
@@ -203,6 +219,8 @@ Improving your credit score is not an abstract goal — it translates directly i
 | 680 (Good) | 14.99% | $173 | $1,237 | $1,744 |
 | 620 (Fair) | 24.99% | $198 | $2,119 | $862 |
 | 580 (Poor) | 35.99% | $222 | $2,981 | $0 |
+
+<StatHighlight value="$2,345" label="interest saved on a $5,000 loan by improving your score from 580 to 750" icon="dollar" variant="green" />
 
 Moving from a 580 credit score to 750 saves you $2,345 in interest on just a $5,000 loan. Scale that up to larger amounts — a $15,000 car loan or a $250,000 mortgage — and the savings become life-changing.
 

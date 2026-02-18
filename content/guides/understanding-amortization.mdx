@@ -29,6 +29,13 @@ faqs:
     answer: "An amortization schedule is a table showing every payment over the life of the loan, broken down into principal and interest portions. It shows exactly how much of each payment goes to interest vs principal, and your remaining balance after each payment."
 ---
 
+<StatsGrid title="Amortization at a Glance" stats={[
+  { value: "$396", label: "Total interest on a $3K loan at 24% APR for 12 months", icon: "dollar" },
+  { value: "21%", label: "Of Payment 1 goes to interest vs 2% of Payment 12", icon: "trending-down" },
+  { value: "$886", label: "Saved with extra $100/month on a $10K loan at 18%", icon: "trending-up" },
+  { value: "$817", label: "Extra interest cost choosing 36 months over 12 months", icon: "clock" }
+]} />
+
 ## What Is Amortization?
 
 Amortization is the process of paying off a loan through a series of equal, scheduled payments over a set period of time. Each payment is divided into two parts: one portion pays the **interest** (the cost of borrowing), and the other portion pays down the **principal** (the original amount you borrowed). By the end of the term, your balance reaches zero and the loan is fully repaid.
@@ -71,7 +78,9 @@ Here is how the first three and last three payments break down:
 
 **Payment 12:** You still pay $283, but now $277.41 goes to principal and only $5.59 is interest. The interest has shrunk dramatically because your remaining balance is only $279 instead of $3,000.
 
-Over the full 12 months, you pay approximately **$396 in total interest**. Notice that the interest portion of Payment 1 ($60) is more than ten times the interest portion of Payment 12 ($5.59). This is amortization at work.
+<StatHighlight value="$396" label="Total interest paid on a $3,000 loan at 24% APR over 12 months — with Payment 1 interest ($60) more than 10x Payment 12 ($5.59)" icon="dollar" variant="red" />
+
+This is amortization at work.
 
 ## How to Read an Amortization Schedule
 
@@ -129,15 +138,24 @@ The impact of extra payments is even more dramatic on larger loans with longer t
 | Extra $50/month | $412 | ~31 | $2,516 | $500 |
 | Extra $100/month | $462 | ~28 | $2,130 | $886 |
 
-On this larger loan, an extra $100 per month saves $886 in interest and pays off the loan eight months early. That is a substantial return on money that was going to be spent anyway — just spent faster.
+<StatHighlight value="$886" label="Interest saved with an extra $100/month on a $10,000 loan at 18% APR — plus 8 months off the term" icon="trending-up" variant="green" />
 
+That is a substantial return on money that was going to be spent anyway — just spent faster.
+
+<Callout type="warning" title="Check for Prepayment Penalties">
 Before making extra payments, confirm that your lender does not charge a prepayment penalty. Most reputable online lenders do not, but always verify in your loan agreement.
+</Callout>
 
 ## Short Term vs Long Term
 
 The loan term you choose has a dramatic effect on both the monthly payment and the total finance charge. Amortization math explains why.
 
 Consider a **$5,000 loan at 15% APR** at two different term lengths:
+
+<ComparisonRow title="$5,000 Loan at 15% APR: Short vs Long Term" options={[
+  { title: "12-Month Term", variant: "green", recommended: true, stats: [{ label: "Monthly Payment", value: "$451" }, { label: "Total Interest", value: "$416" }, { label: "Interest as % of Principal", value: "8.3%" }] },
+  { title: "36-Month Term", variant: "red", stats: [{ label: "Monthly Payment", value: "$173" }, { label: "Total Interest", value: "$1,233" }, { label: "Interest as % of Principal", value: "24.7%" }] }
+]} />
 
 | | 12 Months | 36 Months |
 |---|---|---|
@@ -149,6 +167,10 @@ Consider a **$5,000 loan at 15% APR** at two different term lengths:
 The 36-month loan has a monthly payment that is $278 lower — much easier on the monthly budget. But you pay $817 more in total interest. That is because you are carrying the balance for three times as long, and interest accrues on that balance every single month.
 
 The amortization schedule for the 36-month loan shows that in the early months, a large portion of the $173 payment is interest. The principal decreases very slowly. By contrast, the 12-month loan's higher payment attacks the principal aggressively from the start, giving interest less time and less balance to accumulate on.
+
+<Callout type="tip" title="Choose the Shortest Term You Can Afford">
+The shortest term you can comfortably afford will always save you the most money. "Comfortably" means the payment fits your budget with room for unexpected expenses.
+</Callout>
 
 **The takeaway:** Choose the shortest term you can comfortably afford. "Comfortably" means the payment fits your budget with room for unexpected expenses. If you can handle $451 per month, the 12-month term saves you $817. But if $451 would strain your budget and risk missed payments, the 36-month term at $173 is the safer choice — a paid loan with more interest is always better than a defaulted loan with less.
 

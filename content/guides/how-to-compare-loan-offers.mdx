@@ -29,12 +29,21 @@ faqs:
     answer: "Yes, especially with credit unions and community banks. Show them competing offers. Online lenders have less flexibility since rates are algorithm-driven, but you can sometimes negotiate on fees. It never hurts to ask."
 ---
 
+<StatsGrid title="Why Loan Comparison Matters" stats={[
+  { value: "$656", label: "Potential savings on a $5K loan by shopping around", icon: "dollar" },
+  { value: "8-36%", label: "APR range for the same borrower", icon: "percent" },
+  { value: "3-5", label: "Minimum offers to compare", icon: "chart" },
+  { value: "14-45 days", label: "Rate-shopping window (counts as 1 inquiry)", icon: "clock" }
+]} />
+
 ## Why Comparing Matters
 
 The same borrower — same credit score, same income, same debt — can receive loan offers ranging from 8% to 36% APR depending on which lender they apply with. On a $5,000 loan over 24 months, that difference looks like this:
 
 - **At 8% APR:** $226/month, $5,416 total, **$416 in interest**
 - **At 36% APR:** $253/month, $6,072 total, **$1,072 in interest**
+
+<StatHighlight value="$656" label="difference in total cost on the same $5,000 loan — just by choosing a different lender" icon="dollar" variant="red" />
 
 That is a $656 difference — simply because of which lender you chose. The monthly payment difference is only $27, which most people would shrug off. But the total cost difference is substantial.
 
@@ -78,6 +87,11 @@ The interest rate is the percentage the lender charges on your outstanding balan
 | Total repaid | $5,760 | $5,736 |
 | **Total cost of borrowing** | **$760** | **$736** |
 
+<ComparisonRow title="Interest Rate vs. APR: Which Loan Is Cheaper?" options={[
+  { title: "Loan A (Lower Rate)", variant: "red", stats: [{ label: "Interest Rate", value: "12%" }, { label: "Effective APR", value: "15.8%" }, { label: "Total Cost", value: "$760" }] },
+  { title: "Loan B (No Fee)", variant: "green", recommended: true, stats: [{ label: "Interest Rate", value: "14%" }, { label: "Effective APR", value: "14.0%" }, { label: "Total Cost", value: "$736" }] }
+]} />
+
 Loan A has the lower interest rate (12% vs. 14%) but the higher APR and higher total cost because of the origination fee. If you compared interest rates alone, you would choose the more expensive loan.
 
 **Always compare APR.** It is the standardized metric required by the federal Truth in Lending Act for exactly this reason. For a detailed explanation of how APR works across different loan types, read our guide on [understanding APR on small-dollar loans](/guides/understanding-apr-small-dollar-loans).
@@ -120,7 +134,9 @@ Beyond APR and total cost, individual fees can significantly affect what you pay
 | Check processing fee | $5 to $15 | No | Some lenders charge extra for non-ACH payment methods |
 | Loan modification fee | Varies | No | Fee for changing your payment schedule or terms mid-loan |
 
-**What to ask every lender:** "Can you provide a complete list of all fees associated with this loan, including those that are conditional?" Any lender that cannot or will not answer this question clearly is a lender you should avoid.
+<Callout type="tip" title="Key Question for Every Lender">
+Ask: "Can you provide a **complete list of all fees** associated with this loan, including those that are conditional?" Any lender that cannot or will not answer this question clearly is a lender you should avoid.
+</Callout>
 
 For a complete checklist of questions to ask about fees and terms, see our guide on [10 questions to ask before taking out a loan](/guides/questions-to-ask-before-taking-loan).
 
@@ -210,6 +226,10 @@ Fill in each row for every offer you receive. The offer with the lowest total co
 ## Common Comparison Mistakes
 
 Even informed borrowers make these mistakes when evaluating loan offers. Avoid them.
+
+<Callout type="warning" title="Don't Fall for the Monthly Payment Trap">
+The lowest monthly payment often comes with the longest term, meaning you pay **more** in total interest. Always calculate the total cost of the loan, not just what fits your monthly budget.
+</Callout>
 
 ### Mistake 1: Focusing Only on Monthly Payment
 
