@@ -29,6 +29,13 @@ faqs:
     answer: "Contact your lender immediately — before the payment is due if possible. Many lenders offer hardship programs, extended payment plans, or modified terms. Ignoring the problem always makes it worse. If you can't resolve it with the lender, contact a nonprofit credit counselor through the NFCC."
 ---
 
+<StatsGrid title="Default Impact at a Glance" stats={[
+  { value: "60–110", label: "Credit score point drop from one 30-day late", icon: "trending-down" },
+  { value: "7 years", label: "How long default stays on your credit report", icon: "clock" },
+  { value: "25%", label: "Max wage garnishment (disposable earnings)", icon: "percent" },
+  { value: "29 days", label: "Window to pay before credit bureaus are notified", icon: "shield" }
+]} />
+
 Missing a loan payment is stressful. Missing several can feel catastrophic. But understanding what actually happens when a loan goes into default — the specific timeline, the real consequences, and the concrete steps you can take — puts you in a far better position than ignoring the problem and hoping it resolves itself.
 
 Default does not happen overnight. There is almost always a window to act, and the earlier you act, the more options you have. This guide explains the full sequence of events, the consequences by loan type, your legal rights, and exactly what to do if you're falling behind.
@@ -62,13 +69,15 @@ You've missed your payment due date. Most lenders offer a short grace period (ty
 
 During this window, your account is delinquent but the missed payment has **not yet been reported to credit bureaus**. If you can make the payment within 29 days of the due date, you will owe the late fee but your credit report remains unaffected.
 
-**This is the cheapest and easiest time to resolve the problem.** A single phone call and a payment can end it here.
+<Callout type="tip" title="Act Within 29 Days">
+If you can make the payment within 29 days of the due date, you will owe the late fee but your credit report remains unaffected. A single phone call and a payment can end it here.
+</Callout>
 
 ### Day 30: Credit Bureau Reporting Begins
 
 At 30 days past due, most lenders report the delinquency to one or more of the three major credit bureaus — Equifax, Experian, and TransUnion. A "30 days late" mark appears on your credit report.
 
-**This is a turning point.** A single 30-day late payment can drop your credit score by 60 to 110 points, depending on your starting score. Borrowers with higher scores experience larger drops. This mark stays on your credit report for 7 years.
+<StatHighlight value="-60 to -110 points" label="credit score impact from a single 30-day late payment — stays on your report for 7 years" icon="trending-down" variant="red" />
 
 Additional late fees may be charged. The lender will likely contact you by phone, email, or letter to request payment.
 
@@ -155,8 +164,7 @@ If your debt is sent to a collection agency, understanding your rights is essent
 - File a lawsuit to recover the debt
 - Negotiate settlements for less than the full amount owed
 
-### What Collectors CANNOT Do
-
+<Callout type="info" title="Your Rights: What Collectors CANNOT Do">
 - Threaten you with arrest or jail
 - Use obscene, profane, or abusive language
 - Call repeatedly with intent to harass
@@ -165,6 +173,7 @@ If your debt is sent to a collection agency, understanding your rights is essent
 - Misrepresent the amount you owe
 - Threaten legal action they don't intend to take
 - Contact you at all if you send a written request to stop (though the debt still exists)
+</Callout>
 
 ### Your Right to Debt Validation
 

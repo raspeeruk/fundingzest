@@ -29,6 +29,13 @@ faqs:
     answer: "For fixed-rate loans (including most payday and installment loans), the APR cannot change after you sign the agreement. For variable-rate loans, the APR can increase or decrease based on market rates. All payday loans and nearly all small-dollar installment loans are fixed-rate — the cost disclosed at signing is the cost you'll pay."
 ---
 
+<StatsGrid title="APR at a Glance" stats={[
+  { value: "391%", label: "Typical payday loan APR (14-day term)", icon: "percent" },
+  { value: "$75", label: "Actual fee on a $500 payday loan", icon: "dollar" },
+  { value: "28%", label: "Max APR on credit union PALs", icon: "shield" },
+  { value: "36%", label: "APR cap in 18+ states", icon: "chart" }
+]} />
+
 ## What Is APR and Why Does It Matter?
 
 APR — Annual Percentage Rate — is the standardized way to express how much a loan costs per year. It includes both the interest rate and certain mandatory fees, converted into a single annual percentage.
@@ -81,7 +88,9 @@ Here's a side-by-side comparison showing how APR translates into actual dollar c
 | Payday loan (one-time) | 391% | 14 days | $75 | $575 |
 | Payday loan (3 rollovers) | 391% | 8 weeks | $300 | $800 |
 
-**The critical insight:** A 391% APR payday loan costs $75 if used once as designed. But the same payday loan rolled over three times costs $300 — while a 99% APR installment loan over 6 months costs $149 total with predictable monthly payments.
+<Callout type="info" title="The Critical Insight">
+A 391% APR payday loan costs **$75** if used once as designed. But the same loan rolled over three times costs **$300** — while a 99% APR installment loan over 6 months costs **$149 total** with predictable monthly payments.
+</Callout>
 
 APR alone doesn't tell the full story. How you use the loan — and whether you roll it over — determines the true cost.
 
@@ -123,12 +132,29 @@ APR alone isn't enough. Ask each lender:
 
 A lower APR with a lump-sum repayment may be riskier than a slightly higher APR with monthly installments:
 
-| Option A | Option B |
-|----------|----------|
-| $500 payday loan | $500 installment loan |
-| 391% APR | 120% APR |
-| $75 fee, due in 14 days | $183 total interest, $114/month for 6 months |
-| **Risk:** If you can't repay $575 in a lump sum, rollover fees accumulate | **Lower risk:** $114/month is more manageable than $575 at once |
+<ComparisonRow title="$500 Loan: Repayment Structure Matters" options={[
+  {
+    title: "Payday Loan",
+    variant: "red",
+    stats: [
+      { label: "APR", value: "391%" },
+      { label: "Fee", value: "$75" },
+      { label: "Due", value: "14 days (lump sum)" },
+      { label: "Rollover risk", value: "Fees accumulate" }
+    ]
+  },
+  {
+    title: "Installment Loan",
+    variant: "green",
+    recommended: true,
+    stats: [
+      { label: "APR", value: "120%" },
+      { label: "Total interest", value: "$183" },
+      { label: "Payment", value: "$114/month for 6 months" },
+      { label: "Risk", value: "Lower — structured payments" }
+    ]
+  }
+]} />
 
 ### Step 4: Calculate Your Ability to Repay
 

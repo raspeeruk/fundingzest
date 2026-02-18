@@ -14,6 +14,10 @@ import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { AffiliateDisclosure } from "@/components/content/AffiliateDisclosure";
+import { StatHighlight } from "@/components/content/StatHighlight";
+import { StatsGrid } from "@/components/content/StatsGrid";
+import { Callout } from "@/components/content/Callout";
+import { ComparisonRow } from "@/components/content/ComparisonRow";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -57,6 +61,10 @@ function ApplyButton({ amount, text }: { amount: number; text: string }) {
 
 const mdxComponents = {
   ApplyButton,
+  StatHighlight,
+  StatsGrid,
+  Callout,
+  ComparisonRow,
   a: ({
     href,
     children,

@@ -31,6 +31,13 @@ faqs:
     answer: "Applying for a payday loan typically does not affect your credit score because most payday lenders do not perform hard credit inquiries. However, if you default on a payday loan and it is sent to collections, the collection account may appear on your credit report and negatively impact your score."
 ---
 
+<StatsGrid title="Payday Loan Snapshot" stats={[
+  { value: "$15", label: "Average fee per $100 borrowed", icon: "dollar" },
+  { value: "391%", label: "Typical APR on a 14-day loan", icon: "percent" },
+  { value: "80%", label: "Loans rolled over or renewed", icon: "warning" },
+  { value: "14 days", label: "Standard repayment term", icon: "clock" }
+]} />
+
 ## What Is a Payday Loan?
 
 A payday loan is a short-term, small-dollar loan designed to bridge a financial gap until your next paycheck. Borrowers typically receive between $100 and $1,000, repay the loan within 2 to 4 weeks, and pay a flat fee for the privilege of borrowing.
@@ -123,13 +130,11 @@ However, APR is useful for comparison. It reveals that borrowing $500 for 14 day
 
 ### The Real Danger: Rollovers and Renewals
 
-The Consumer Financial Protection Bureau (CFPB) found that **80% of payday loans are rolled over or followed by another loan within 14 days**. When you roll over a loan, you pay another fee to extend the due date — but the original principal remains.
+<StatHighlight value="80%" label="of payday loans are rolled over or followed by another loan within 14 days (CFPB)" icon="warning" variant="red" />
 
-**Example of a rollover cycle:**
-- You borrow $500 with a $75 fee. Total owed: $575.
-- On the due date, you can't repay. You pay the $75 fee to roll over for another 2 weeks.
-- After the second period, you pay another $75 fee to roll over again.
-- After 3 rollovers (6 weeks), you've paid $225 in fees and still owe the original $500.
+<Callout type="warning" title="The Rollover Trap">
+You borrow $500 with a $75 fee. On the due date, you can't repay — so you pay $75 to roll over for another 2 weeks. After the second period, another $75 fee. After 3 rollovers (6 weeks), you've paid **$225 in fees** and still owe the original $500.
+</Callout>
 
 This is how a $75 fee can turn into hundreds of dollars in costs. Many states have enacted rollover limits or cooling-off periods to address this.
 
@@ -183,6 +188,32 @@ Check your state's specific regulations on our [state lending laws page](/states
 
 Understanding how payday loans compare to alternatives helps you make the best choice for your situation:
 
+<ComparisonRow title="Payday Loan vs Installment Loan: $500 Borrowed" options={[
+  {
+    title: "Payday Loan",
+    variant: "red",
+    stats: [
+      { label: "Amount", value: "$100–$1,000" },
+      { label: "Term", value: "2–4 weeks" },
+      { label: "Typical APR", value: "200%–780%" },
+      { label: "Repayment", value: "Lump sum" },
+      { label: "Credit check", value: "None/soft" }
+    ]
+  },
+  {
+    title: "Installment Loan",
+    variant: "green",
+    recommended: true,
+    stats: [
+      { label: "Amount", value: "$500–$5,000" },
+      { label: "Term", value: "3–24 months" },
+      { label: "Typical APR", value: "36%–199%" },
+      { label: "Repayment", value: "Monthly installments" },
+      { label: "Credit check", value: "Soft or hard" }
+    ]
+  }
+]} />
+
 | Feature | Payday Loan | Installment Loan | Credit Union PAL | Cash Advance App |
 |---------|------------|------------------|-----------------|-----------------|
 | **Amount** | $100-$1,000 | $500-$5,000 | $200-$2,000 | $50-$500 |
@@ -223,8 +254,7 @@ If you decide a payday loan is your best option, compare offers using these crit
 
 ## Red Flags to Watch For
 
-Avoid lenders that exhibit these warning signs:
-
+<Callout type="warning" title="Avoid Lenders That Show These Signs">
 - **No state license disclosure:** Legitimate lenders clearly state which states they're licensed in
 - **Guaranteed approval:** No reputable lender can guarantee approval
 - **Upfront fees before funding:** Legitimate lenders deduct fees from the loan or collect at repayment, not before
@@ -232,6 +262,7 @@ Avoid lenders that exhibit these warning signs:
 - **Unclear or missing APR disclosure:** Federal law requires this — if it's missing, the lender may be operating illegally
 - **No physical address or contact information:** Check for a real business address and customer service number
 - **Requests for unusual payment methods:** Wire transfers, gift cards, or cryptocurrency are red flags
+</Callout>
 
 ## How to Apply Through FundingZest
 
