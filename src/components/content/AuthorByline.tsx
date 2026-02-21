@@ -15,7 +15,7 @@ export function AuthorByline({
 }: AuthorBylineProps) {
   return (
     <div className="mt-8 flex items-center gap-4 border-t border-gray-200 pt-4">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-sm font-bold text-green-700">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-light text-sm font-bold text-brand">
         {name
           .split(" ")
           .map((n) => n[0])
@@ -24,7 +24,7 @@ export function AuthorByline({
       <div>
         <p className="font-medium text-gray-900">
           Reviewed by{" "}
-          <Link href={`/authors/${slug}`} className="text-green-700 underline">
+          <Link href={`/authors/${slug}`} className="text-brand underline">
             {name}
           </Link>
           <span className="text-gray-500">, {credentials}</span>

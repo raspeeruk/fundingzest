@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo/metadata";
+import { SITE_NAME } from "@/lib/site.config";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = createMetadata({
   title: "Loan Types",
   description:
-    "Explore different loan types available through FundingZest: payday loans, bad credit loans, same day loans, emergency loans, and more.",
+    `Explore different loan types available through ${SITE_NAME}: payday loans, bad credit loans, same day loans, emergency loans, and more.`,
   path: "/loans",
 });
 
@@ -78,9 +79,9 @@ export default function LoansPage() {
           <Link
             key={type.slug}
             href={`/loans/${type.slug}`}
-            className="group rounded-lg border border-gray-200 p-6 transition hover:border-green-700 hover:shadow-md"
+            className="group rounded-lg border border-gray-200 p-6 transition hover:border-brand hover:shadow-md"
           >
-            <h2 className="mb-2 text-lg font-bold text-gray-900 group-hover:text-green-700">
+            <h2 className="mb-2 text-lg font-bold text-gray-900 group-hover:text-brand">
               {type.name}
             </h2>
             <p className="mb-4 text-sm text-gray-600">{type.description}</p>
@@ -98,7 +99,7 @@ export default function LoansPage() {
         ))}
       </div>
 
-      <div className="mt-12 rounded-lg bg-green-50 p-6 text-center">
+      <div className="mt-12 rounded-lg bg-brand-lighter p-6 text-center">
         <h2 className="mb-2 text-xl font-bold text-gray-900">
           Know how much you need?
         </h2>
@@ -108,7 +109,7 @@ export default function LoansPage() {
         </p>
         <Link
           href="/borrow"
-          className="inline-block rounded-lg bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800"
+          className="inline-block rounded-lg bg-brand px-6 py-3 font-semibold text-white hover:bg-brand-dark"
         >
           Browse by Amount
         </Link>

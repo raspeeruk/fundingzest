@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { createMetadata } from "@/lib/seo/metadata";
+import { SITE_NAME } from "@/lib/site.config";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = createMetadata({
   title: "Apply for a Loan",
   description:
-    "Apply for a personal loan through FundingZest. Compare offers from multiple lenders in our network. Bad credit considered.",
+    `Apply for a personal loan through ${SITE_NAME}. Compare offers from multiple lenders in our network. Bad credit considered.`,
   path: "/apply",
   noIndex: true,
 });

@@ -225,7 +225,7 @@ export default function NoCreditCheckLoansPage() {
                   <Link
                     key={loan.slug}
                     href={`/borrow/${loan.slug}`}
-                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-green-300 hover:bg-green-50 hover:text-green-700"
+                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-brand-light hover:bg-brand-lighter hover:text-brand"
                   >
                     {loan.displayAmount}
                   </Link>
@@ -241,28 +241,28 @@ export default function NoCreditCheckLoansPage() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <Link
                   href="/loans/bad-credit"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Bad Credit Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Options for borrowers with poor or no credit history</p>
                 </Link>
                 <Link
                   href="/loans/payday"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Payday Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Short-term loans with minimal credit requirements</p>
                 </Link>
                 <Link
                   href="/loans/same-day"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Same Day Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Fast approval and same-day funding</p>
                 </Link>
                 <Link
                   href="/loans/emergency"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Emergency Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Quick cash for urgent expenses</p>
@@ -277,19 +277,19 @@ export default function NoCreditCheckLoansPage() {
               </h2>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">CFPB — Credit Reports and Scores</a>
+                  <a href="https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/" target="_blank" rel="noopener noreferrer" className="text-brand underline">CFPB — Credit Reports and Scores</a>
                   {" "}<span className="text-gray-500">— Understand your credit rights and dispute errors</span>
                 </li>
                 <li>
-                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">FTC — Borrowing and Credit</a>
+                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-brand underline">FTC — Borrowing and Credit</a>
                   {" "}<span className="text-gray-500">— Avoid scams and predatory lenders</span>
                 </li>
                 <li>
-                  <a href="https://www.annualcreditreport.com/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">AnnualCreditReport.com</a>
+                  <a href="https://www.annualcreditreport.com/" target="_blank" rel="noopener noreferrer" className="text-brand underline">AnnualCreditReport.com</a>
                   {" "}<span className="text-gray-500">— Free annual credit reports from all three bureaus</span>
                 </li>
                 <li>
-                  <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">211.org</a>
+                  <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" className="text-brand underline">211.org</a>
                   {" "}<span className="text-gray-500">— Find local financial assistance programs and alternatives to borrowing</span>
                 </li>
               </ul>

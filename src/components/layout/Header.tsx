@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "@/lib/site.config";
 
 const NAV_ITEMS = [
   { label: "Borrow", href: "/borrow" },
@@ -13,7 +14,7 @@ export function Header() {
     <header className="border-b border-gray-200 bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-green-700">FundingZest</span>
+          <span className="text-xl font-bold text-brand">{siteConfig.name}</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -21,7 +22,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-gray-600 transition-colors hover:text-green-700"
+              className="text-sm font-medium text-gray-600 transition-colors hover:text-brand"
             >
               {item.label}
             </Link>
@@ -31,7 +32,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link
             href="/apply"
-            className="rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-green-800"
+            className="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
           >
             Apply Now
           </Link>
@@ -46,8 +47,8 @@ export function Header() {
 
       {/* Disclosure banner */}
       <div className="bg-gray-50 px-4 py-1.5 text-center text-xs text-gray-500">
-        FundingZest may receive compensation when you click on links to our
-        lender partners.{" "}
+        {siteConfig.name} may receive compensation when you click on links to
+        our lender partners.{" "}
         <Link href="/advertiser-disclosure" className="underline">
           Learn more
         </Link>

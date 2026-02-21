@@ -13,6 +13,7 @@ import {
   formatCurrency as formatStateCurrency,
 } from "@/lib/data/states";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig } from "@/lib/site.config";
 import { LoanSchema } from "@/components/seo/LoanSchema";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -89,7 +90,7 @@ export default async function LoanAmountStatePage({ params }: Props) {
     },
     {
       question: `Can I get a ${loan.displayAmount} loan in ${state.name} with bad credit?`,
-      answer: `Yes, many lenders in FundingZest's network consider ${state.name} applicants with bad credit or no credit history. Lenders look at factors beyond your credit score, including your income and employment status. APRs may be higher for borrowers with lower credit scores.`,
+      answer: `Yes, many lenders in ${siteConfig.name}'s network consider ${state.name} applicants with bad credit or no credit history. Lenders look at factors beyond your credit score, including your income and employment status. APRs may be higher for borrowers with lower credit scores.`,
     },
     {
       question: `Where can I file a complaint about a lender in ${state.name}?`,
@@ -194,7 +195,7 @@ export default async function LoanAmountStatePage({ params }: Props) {
                       </td>
                       <td className="px-4 py-3 text-gray-600">
                         {state.paydayLegal ? (
-                          <span className="font-medium text-green-700">
+                          <span className="font-medium text-brand">
                             Legal &amp; Regulated
                           </span>
                         ) : (
@@ -277,7 +278,7 @@ export default async function LoanAmountStatePage({ params }: Props) {
                           href={state.regulatorUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-green-700 underline"
+                          className="text-brand underline"
                         >
                           {state.regulatorName}
                         </a>
@@ -420,13 +421,13 @@ export default async function LoanAmountStatePage({ params }: Props) {
               <ol className="space-y-3">
                 {[
                   `Check your eligibility — you must be at least 18 years old${state.abbreviation === "AL" || state.abbreviation === "NE" ? " (19 in " + state.name + ")" : ""} and a ${state.name} resident.`,
-                  "Compare your options on FundingZest to understand the rates, terms, and fees available to you.",
+                  `Compare your options on ${siteConfig.name} to understand the rates, terms, and fees available to you.`,
                   "Complete the application form with your personal and financial information.",
                   "Review any loan offer carefully, including the APR, total cost, and repayment schedule.",
                   "Accept the offer that works best for your situation. Funds can be deposited as soon as the next business day.",
                 ].map((step, i) => (
                   <li key={i} className="flex gap-3 text-gray-600">
-                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-light text-xs font-bold text-brand">
                       {i + 1}
                     </span>
                     {step}
@@ -452,7 +453,7 @@ export default async function LoanAmountStatePage({ params }: Props) {
                     <Link
                       key={amt}
                       href={`/borrow/${slug}/${state.slug}`}
-                      className="rounded border border-gray-200 px-3 py-2 text-center text-sm text-gray-600 transition-colors hover:border-green-300 hover:bg-green-50 hover:text-green-700"
+                      className="rounded border border-gray-200 px-3 py-2 text-center text-sm text-gray-600 transition-colors hover:border-brand-light hover:bg-brand-lighter hover:text-brand"
                     >
                       {display}
                     </Link>
@@ -536,7 +537,7 @@ export default async function LoanAmountStatePage({ params }: Props) {
                     href={state.regulatorUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-700 underline"
+                    className="text-brand underline"
                   >
                     {state.regulatorName}
                   </a>

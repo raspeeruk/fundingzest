@@ -1,20 +1,22 @@
 import { JsonLd } from "./JsonLd";
+import { siteConfig } from "@/lib/site.config";
 
 export function OrganizationSchema() {
   const data = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "FundingZest",
-    url: "https://fundingzest.com",
-    logo: "https://fundingzest.com/images/logos/fundingzest-logo.png",
-    description:
-      "FundingZest is a loan comparison service that connects borrowers with lenders. Compare personal loans, payday loans, and more.",
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/images/logos/${siteConfig.domain.replace(/\./g, "-")}-logo.png`,
+    description: `${siteConfig.name} is a ${siteConfig.voice.companyDescriptor} that connects borrowers with lenders. Compare personal loans, payday loans, and more.`,
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
-      url: "https://fundingzest.com/contact",
+      url: `${siteConfig.url}/contact`,
     },
-    sameAs: [],
+    sameAs: [siteConfig.social.linkedin, siteConfig.social.twitter].filter(
+      Boolean
+    ),
   };
 
   return <JsonLd data={data} />;

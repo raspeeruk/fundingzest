@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-
-const SITE_NAME = "FundingZest";
-const SITE_URL = "https://fundingzest.com";
-const SITE_DESCRIPTION =
-  "Compare personal loan and payday loan options from FundingZest's network of lenders. Bad credit considered. Apply in minutes, funds as soon as same day.";
+import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/site.config";
 
 interface CreateMetadataOptions {
   title: string;

@@ -1,4 +1,5 @@
 import { JsonLd } from "./JsonLd";
+import { SITE_URL } from "@/lib/site.config";
 
 interface BreadcrumbItem {
   name: string;
@@ -17,7 +18,7 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `https://fundingzest.com${item.href}`,
+      item: `${SITE_URL}${item.href}`,
     })),
   };
 

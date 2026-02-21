@@ -54,14 +54,14 @@ export default function StatesPage() {
                 <td className="px-4 py-3">
                   <Link
                     href={`/states/${state.slug}`}
-                    className="font-medium text-green-700 hover:text-green-800"
+                    className="font-medium text-brand hover:text-brand-dark"
                   >
                     {state.name}
                   </Link>
                 </td>
                 <td className="px-4 py-3">
                   {state.paydayLegal ? (
-                    <span className="text-green-700">Yes</span>
+                    <span className="text-brand">Yes</span>
                   ) : (
                     <span className="text-red-600">No</span>
                   )}
@@ -81,7 +81,7 @@ export default function StatesPage() {
                     href={state.regulatorUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-green-700 underline"
+                    className="text-sm text-brand underline"
                   >
                     {state.regulatorName}
                   </a>

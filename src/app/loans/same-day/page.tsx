@@ -131,7 +131,7 @@ export default function SameDayLoansPage() {
                   },
                 ].map((item, i) => (
                   <li key={i} className="flex gap-4">
-                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-sm font-bold text-green-700">
+                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-light text-sm font-bold text-brand">
                       {i + 1}
                     </span>
                     <div>
@@ -215,7 +215,7 @@ export default function SameDayLoansPage() {
                   <Link
                     key={loan.slug}
                     href={`/borrow/${loan.slug}`}
-                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-green-300 hover:bg-green-50 hover:text-green-700"
+                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-brand-light hover:bg-brand-lighter hover:text-brand"
                   >
                     {loan.displayAmount}
                   </Link>
@@ -231,28 +231,28 @@ export default function SameDayLoansPage() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <Link
                   href="/loans/payday"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Payday Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Short-term loans with fast approval</p>
                 </Link>
                 <Link
                   href="/loans/emergency"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Emergency Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Quick cash for urgent expenses</p>
                 </Link>
                 <Link
                   href="/loans/bad-credit"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Bad Credit Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Options for all credit types</p>
                 </Link>
                 <Link
                   href="/loans/installment"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Installment Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Fixed monthly payments over longer terms</p>
@@ -267,19 +267,19 @@ export default function SameDayLoansPage() {
               </h2>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="https://www.consumerfinance.gov/consumer-tools/payday-loans/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">CFPB — Payday Loans</a>
+                  <a href="https://www.consumerfinance.gov/consumer-tools/payday-loans/" target="_blank" rel="noopener noreferrer" className="text-brand underline">CFPB — Payday Loans</a>
                   {" "}<span className="text-gray-500">— Federal guidance on short-term lending rights</span>
                 </li>
                 <li>
-                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">FTC — Borrowing and Credit</a>
+                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-brand underline">FTC — Borrowing and Credit</a>
                   {" "}<span className="text-gray-500">— Consumer protection tips and scam prevention</span>
                 </li>
                 <li>
-                  <a href="https://www.fdic.gov/consumer-resource-center" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">FDIC Consumer Assistance</a>
+                  <a href="https://www.fdic.gov/consumer-resource-center" target="_blank" rel="noopener noreferrer" className="text-brand underline">FDIC Consumer Assistance</a>
                   {" "}<span className="text-gray-500">— Help with bank-related issues and deposits</span>
                 </li>
                 <li>
-                  <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">211.org</a>
+                  <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" className="text-brand underline">211.org</a>
                   {" "}<span className="text-gray-500">— Local emergency assistance if you need help immediately</span>
                 </li>
               </ul>

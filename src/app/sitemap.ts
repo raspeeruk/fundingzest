@@ -2,8 +2,7 @@ import type { MetadataRoute } from "next";
 import { getPublishedLoanAmounts } from "@/lib/data/loanAmounts";
 import { getPublishedStates, getAllStates } from "@/lib/data/states";
 import { getPublishedGuides } from "@/lib/data/guides";
-
-const SITE_URL = "https://fundingzest.com";
+import { SITE_URL, AUTHORS } from "@/lib/site.config";
 
 const LOAN_TYPE_SLUGS = [
   "payday",
@@ -14,7 +13,7 @@ const LOAN_TYPE_SLUGS = [
   "installment",
 ];
 
-const AUTHOR_SLUGS = ["sarah-mitchell", "james-carter", "maria-gonzalez"];
+const AUTHOR_SLUGS = AUTHORS.map((a) => a.slug);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const loanAmounts = getPublishedLoanAmounts();

@@ -190,12 +190,12 @@ export default function InstallmentLoansPage() {
                   {
                     profile: "Excellent (750+)",
                     apr: "6% – 12%",
-                    color: "bg-green-100 text-green-800",
+                    color: "bg-brand-light text-brand-dark",
                   },
                   {
                     profile: "Good (670-749)",
                     apr: "12% – 24%",
-                    color: "bg-green-50 text-green-700",
+                    color: "bg-brand-lighter text-brand",
                   },
                   {
                     profile: "Fair (580-669)",
@@ -276,7 +276,7 @@ export default function InstallmentLoansPage() {
                   <Link
                     key={loan.slug}
                     href={`/borrow/${loan.slug}`}
-                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-green-300 hover:bg-green-50 hover:text-green-700"
+                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-brand-light hover:bg-brand-lighter hover:text-brand"
                   >
                     {loan.displayAmount}
                   </Link>
@@ -292,28 +292,28 @@ export default function InstallmentLoansPage() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <Link
                   href="/loans/payday"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Payday Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Short-term loans for small amounts, repaid on your next payday</p>
                 </Link>
                 <Link
                   href="/loans/bad-credit"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Bad Credit Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Options for borrowers with all credit types</p>
                 </Link>
                 <Link
                   href="/loans/same-day"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Same Day Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Get funds deposited as fast as today</p>
                 </Link>
                 <Link
                   href="/loans/emergency"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Emergency Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Quick funding for unexpected expenses</p>
@@ -328,19 +328,19 @@ export default function InstallmentLoansPage() {
               </h2>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="https://www.consumerfinance.gov/ask-cfpb/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">CFPB — Personal Loans</a>
+                  <a href="https://www.consumerfinance.gov/ask-cfpb/" target="_blank" rel="noopener noreferrer" className="text-brand underline">CFPB — Personal Loans</a>
                   {" "}<span className="text-gray-500">— Federal guidance on personal loan rights and protections</span>
                 </li>
                 <li>
-                  <a href="https://www.annualcreditreport.com/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">AnnualCreditReport.com</a>
+                  <a href="https://www.annualcreditreport.com/" target="_blank" rel="noopener noreferrer" className="text-brand underline">AnnualCreditReport.com</a>
                   {" "}<span className="text-gray-500">— Check your credit report before applying</span>
                 </li>
                 <li>
-                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">FTC — Borrowing and Credit</a>
+                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-brand underline">FTC — Borrowing and Credit</a>
                   {" "}<span className="text-gray-500">— Avoid lending scams and understand your rights</span>
                 </li>
                 <li>
-                  <a href="https://www.myfico.com/credit-education/credit-scores" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">myFICO — Credit Scores</a>
+                  <a href="https://www.myfico.com/credit-education/credit-scores" target="_blank" rel="noopener noreferrer" className="text-brand underline">myFICO — Credit Scores</a>
                   {" "}<span className="text-gray-500">— Understand how your score affects loan rates</span>
                 </li>
               </ul>

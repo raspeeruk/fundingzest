@@ -18,19 +18,20 @@ const smColsMap: Record<number, string> = {
   4: "grid-cols-2 sm:grid-cols-4",
 };
 
-export function StatsGrid({ title, stats, variant = "gray" }: StatsGridProps) {
+export function StatsGrid({ title, stats = [], variant = "gray" }: StatsGridProps) {
   const isGreen = variant === "green";
+  if (!stats || stats.length === 0) return null;
   const gridCols = smColsMap[Math.min(stats.length, 4)] ?? "grid-cols-2";
 
   return (
     <div
-      className={`my-8 overflow-hidden rounded-xl border ${isGreen ? "border-green-200 bg-green-50" : "border-gray-200 bg-white"}`}
+      className={`my-8 overflow-hidden rounded-xl border ${isGreen ? "border-brand-light bg-brand-lighter" : "border-gray-200 bg-white"}`}
       role="region"
       aria-label={title ?? "Key statistics"}
     >
       {title && (
         <div
-          className={`border-b px-6 pt-4 pb-3 ${isGreen ? "border-green-200" : "border-gray-200"}`}
+          className={`border-b px-6 pt-4 pb-3 ${isGreen ? "border-brand-light" : "border-gray-200"}`}
         >
           <p className="text-sm font-semibold tracking-wide text-gray-500 uppercase">
             {title}
@@ -43,23 +44,23 @@ export function StatsGrid({ title, stats, variant = "gray" }: StatsGridProps) {
             key={i}
             className={`p-5 ${
               i > 0
-                ? `border-l ${isGreen ? "border-green-200" : "border-gray-100"}`
+                ? `border-l ${isGreen ? "border-brand-light" : "border-gray-100"}`
                 : ""
             } ${
               stats.length > 2 && i >= 2
-                ? `border-t ${isGreen ? "border-green-200" : "border-gray-100"}`
+                ? `border-t ${isGreen ? "border-brand-light" : "border-gray-100"}`
                 : ""
             }`}
           >
             {stat.icon && (
               <div
-                className={`mb-2 ${isGreen ? "text-green-600" : "text-gray-400"}`}
+                className={`mb-2 ${isGreen ? "text-brand-accent" : "text-gray-400"}`}
               >
                 <ContentIcon name={stat.icon} size={20} />
               </div>
             )}
             <p
-              className={`text-2xl font-bold ${isGreen ? "text-green-800" : "text-gray-900"}`}
+              className={`text-2xl font-bold ${isGreen ? "text-brand-dark" : "text-gray-900"}`}
             >
               {stat.value}
             </p>

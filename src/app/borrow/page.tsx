@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getPublishedLoanAmounts } from "@/lib/data/loanAmounts";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig, SITE_NAME } from "@/lib/site.config";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = createMetadata({
   title: "Borrow Money Online - Compare Loan Amounts",
   description:
-    "Compare loan options from $100 to $35,000. Find the right loan amount for your needs with FundingZest's network of lenders. Bad credit considered.",
+    `Compare loan options from $100 to $35,000. Find the right loan amount for your needs with ${SITE_NAME}'s network of lenders. Bad credit considered.`,
   path: "/borrow/",
 });
 
@@ -22,7 +23,7 @@ export default function BorrowPage() {
         Borrow Money Online
       </h1>
       <p className="mb-8 max-w-3xl text-lg text-gray-600">
-        Choose the loan amount you need. FundingZest connects you with lenders
+        Choose the loan amount you need. {siteConfig.name} connects you with lenders
         offering competitive rates for every budget. Select an amount below to
         compare options, see costs, and apply.
       </p>
@@ -32,9 +33,9 @@ export default function BorrowPage() {
           <Link
             key={loan.slug}
             href={`/borrow/${loan.slug}`}
-            className="group rounded-lg border border-gray-200 p-5 transition-all hover:border-green-300 hover:shadow-md"
+            className="group rounded-lg border border-gray-200 p-5 transition-all hover:border-brand-light hover:shadow-md"
           >
-            <p className="text-2xl font-bold text-green-700 group-hover:text-green-800">
+            <p className="text-2xl font-bold text-brand group-hover:text-brand-dark">
               {loan.displayAmount}
             </p>
             <p className="mt-1 text-sm text-gray-500">

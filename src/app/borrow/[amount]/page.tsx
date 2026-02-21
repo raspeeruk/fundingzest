@@ -8,6 +8,7 @@ import {
 } from "@/lib/data/loanAmounts";
 import { getAllStates, getPaydayLegalStates } from "@/lib/data/states";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig } from "@/lib/site.config";
 import { LoanSchema } from "@/components/seo/LoanSchema";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -55,7 +56,7 @@ export default async function LoanAmountPage({ params }: Props) {
   const faqs = [
     {
       question: `Can I get a ${loan.displayAmount} loan with bad credit?`,
-      answer: `Yes, many lenders in FundingZest's network consider applicants with bad credit or no credit history for ${loan.displayAmount} loans. Approval depends on factors beyond credit score, including income and employment status. APRs may be higher for borrowers with lower credit scores.`,
+      answer: `Yes, many lenders in ${siteConfig.name}'s network consider applicants with bad credit or no credit history for ${loan.displayAmount} loans. Approval depends on factors beyond credit score, including income and employment status. APRs may be higher for borrowers with lower credit scores.`,
     },
     {
       question: `How fast can I get a ${loan.displayAmount} loan?`,
@@ -75,7 +76,7 @@ export default async function LoanAmountPage({ params }: Props) {
     },
     {
       question: `Is it safe to apply for a ${loan.displayAmount} loan online?`,
-      answer: `Yes, applying through FundingZest is safe. We use 256-bit SSL encryption to protect your information. We only connect you with licensed lenders who comply with federal and state regulations. Your information is never sold to third parties without your consent.`,
+      answer: `Yes, applying through ${siteConfig.name} is safe. We use 256-bit SSL encryption to protect your information. We only connect you with licensed lenders who comply with federal and state regulations. Your information is never sold to third parties without your consent.`,
     },
   ];
 
@@ -121,7 +122,7 @@ export default async function LoanAmountPage({ params }: Props) {
                 How {loan.displayAmount} Loans Work
               </h2>
               <p className="mb-4 text-gray-600">
-                Getting a {loan.displayAmount} loan through FundingZest is a
+                Getting a {loan.displayAmount} loan through {siteConfig.name} is a
                 straightforward process. We connect you with multiple lenders so
                 you can compare offers and choose the best option for your
                 situation.
@@ -149,7 +150,7 @@ export default async function LoanAmountPage({ params }: Props) {
                   },
                 ].map((item, i) => (
                   <li key={i} className="flex gap-4">
-                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-sm font-bold text-green-700">
+                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-light text-sm font-bold text-brand">
                       {i + 1}
                     </span>
                     <div>
@@ -239,7 +240,7 @@ export default async function LoanAmountPage({ params }: Props) {
                   "Provide a valid email address and phone number",
                 ].map((req, i) => (
                   <li key={i} className="flex items-start gap-2 text-gray-600">
-                    <span className="mt-0.5 text-green-600">&#10003;</span>
+                    <span className="mt-0.5 text-brand-accent">&#10003;</span>
                     {req}
                   </li>
                 ))}
@@ -309,7 +310,7 @@ export default async function LoanAmountPage({ params }: Props) {
                   <Link
                     key={type.href}
                     href={type.href}
-                    className="rounded-lg border border-gray-200 p-3 transition-colors hover:border-green-300 hover:bg-green-50/50"
+                    className="rounded-lg border border-gray-200 p-3 transition-colors hover:border-brand-light hover:bg-brand-lighter/50"
                   >
                     <span className="text-sm font-semibold text-gray-900">
                       {type.name}
@@ -324,7 +325,7 @@ export default async function LoanAmountPage({ params }: Props) {
                 Use our{" "}
                 <Link
                   href="/calculator"
-                  className="text-green-700 underline"
+                  className="text-brand underline"
                 >
                   loan repayment calculator
                 </Link>{" "}
@@ -332,7 +333,7 @@ export default async function LoanAmountPage({ params }: Props) {
                 our{" "}
                 <Link
                   href="/guides/understanding-apr-small-dollar-loans"
-                  className="text-green-700 underline"
+                  className="text-brand underline"
                 >
                   guide to understanding APR
                 </Link>{" "}
@@ -355,7 +356,7 @@ export default async function LoanAmountPage({ params }: Props) {
                     href="https://www.consumerfinance.gov/consumer-tools/payday-loans/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-700 underline"
+                    className="text-brand underline"
                   >
                     CFPB Payday Loan Resources
                   </a>{" "}
@@ -366,7 +367,7 @@ export default async function LoanAmountPage({ params }: Props) {
                     href="https://consumer.ftc.gov/credit-loans-and-debt"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-700 underline"
+                    className="text-brand underline"
                   >
                     FTC Borrowing &amp; Credit Advice
                   </a>{" "}
@@ -377,7 +378,7 @@ export default async function LoanAmountPage({ params }: Props) {
                     href="https://www.annualcreditreport.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-700 underline"
+                    className="text-brand underline"
                   >
                     AnnualCreditReport.com
                   </a>{" "}
@@ -403,7 +404,7 @@ export default async function LoanAmountPage({ params }: Props) {
                     <Link
                       key={state.slug}
                       href={`/borrow/${loan.slug}/${state.slug}`}
-                      className="rounded border border-gray-200 px-3 py-2 text-sm text-gray-600 transition-colors hover:border-green-300 hover:bg-green-50 hover:text-green-700"
+                      className="rounded border border-gray-200 px-3 py-2 text-sm text-gray-600 transition-colors hover:border-brand-light hover:bg-brand-lighter hover:text-brand"
                     >
                       {state.name}
                     </Link>

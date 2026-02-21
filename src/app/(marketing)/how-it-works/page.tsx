@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig, SITE_NAME } from "@/lib/site.config";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = createMetadata({
   title: "How It Works",
   description:
-    "See how FundingZest connects you with loan offers in minutes. Compare rates, choose your best option, and get funded fast.",
+    `See how ${SITE_NAME} connects you with loan offers in minutes. Compare rates, choose your best option, and get funded fast.`,
   path: "/how-it-works",
 });
 
@@ -19,14 +20,14 @@ export default function HowItWorksPage() {
 
       <div className="space-y-8 text-gray-600">
         <p>
-          FundingZest makes it easy to compare loan options from multiple lenders
+          {siteConfig.name} makes it easy to compare loan options from multiple lenders
           in one place. Here&apos;s how the process works:
         </p>
 
         <div className="space-y-6">
           <div className="rounded-lg border border-gray-200 p-6">
             <div className="mb-2 flex items-center gap-3">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-700 text-sm font-bold text-white">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">
                 1
               </span>
               <h2 className="text-xl font-bold text-gray-900">
@@ -42,7 +43,7 @@ export default function HowItWorksPage() {
 
           <div className="rounded-lg border border-gray-200 p-6">
             <div className="mb-2 flex items-center gap-3">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-700 text-sm font-bold text-white">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">
                 2
               </span>
               <h2 className="text-xl font-bold text-gray-900">
@@ -59,7 +60,7 @@ export default function HowItWorksPage() {
 
           <div className="rounded-lg border border-gray-200 p-6">
             <div className="mb-2 flex items-center gap-3">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-700 text-sm font-bold text-white">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">
                 3
               </span>
               <h2 className="text-xl font-bold text-gray-900">
@@ -75,7 +76,7 @@ export default function HowItWorksPage() {
 
           <div className="rounded-lg border border-gray-200 p-6">
             <div className="mb-2 flex items-center gap-3">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-700 text-sm font-bold text-white">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">
                 4
               </span>
               <h2 className="text-xl font-bold text-gray-900">
@@ -91,7 +92,7 @@ export default function HowItWorksPage() {
 
           <div className="rounded-lg border border-gray-200 p-6">
             <div className="mb-2 flex items-center gap-3">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-700 text-sm font-bold text-white">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">
                 5
               </span>
               <h2 className="text-xl font-bold text-gray-900">
@@ -116,7 +117,7 @@ export default function HowItWorksPage() {
               Does applying affect my credit score?
             </h3>
             <p>
-              Submitting your information through FundingZest does not affect
+              Submitting your information through {siteConfig.name} does not affect
               your credit score. However, if you proceed with a lender and they
               perform a hard credit check, that may impact your score.
             </p>
@@ -124,10 +125,10 @@ export default function HowItWorksPage() {
 
           <div>
             <h3 className="font-semibold text-gray-900">
-              Is FundingZest a lender?
+              Is {siteConfig.name} a lender?
             </h3>
             <p>
-              No. FundingZest is a comparison service that connects you with
+              No. {siteConfig.name} is a comparison service that connects you with
               lenders. We do not make lending decisions, set interest rates, or
               fund loans. All lending decisions are made by the individual
               lenders in our network.
@@ -136,7 +137,7 @@ export default function HowItWorksPage() {
 
           <div>
             <h3 className="font-semibold text-gray-900">
-              How does FundingZest make money?
+              How does {siteConfig.name} make money?
             </h3>
             <p>
               We receive a referral fee from lenders when consumers are
@@ -144,7 +145,7 @@ export default function HowItWorksPage() {
               for you. See our{" "}
               <Link
                 href="/advertiser-disclosure"
-                className="text-green-700 underline"
+                className="text-brand underline"
               >
                 advertiser disclosure
               </Link>{" "}
@@ -168,31 +169,31 @@ export default function HowItWorksPage() {
         <h2 className="text-xl font-bold text-gray-900">Learn More</h2>
         <ul className="list-inside list-disc space-y-1 text-gray-600">
           <li>
-            <Link href="/borrow" className="text-green-700 underline">
+            <Link href="/borrow" className="text-brand underline">
               Browse loan amounts
             </Link>{" "}
             from $100 to $35,000
           </li>
           <li>
-            <Link href="/loans" className="text-green-700 underline">
+            <Link href="/loans" className="text-brand underline">
               Compare loan types
             </Link>{" "}
             &mdash; payday, installment, bad credit, and more
           </li>
           <li>
-            <Link href="/guides" className="text-green-700 underline">
+            <Link href="/guides" className="text-brand underline">
               Read our financial guides
             </Link>{" "}
             for expert borrowing advice
           </li>
           <li>
-            <Link href="/calculator" className="text-green-700 underline">
+            <Link href="/calculator" className="text-brand underline">
               Use our loan calculator
             </Link>{" "}
             to estimate repayment costs
           </li>
           <li>
-            <Link href="/states" className="text-green-700 underline">
+            <Link href="/states" className="text-brand underline">
               Check your state&apos;s lending laws
             </Link>{" "}
             before applying
@@ -200,26 +201,26 @@ export default function HowItWorksPage() {
         </ul>
 
         <p className="text-sm text-gray-600">
-          FundingZest is regulated under federal consumer protection laws. For
+          {siteConfig.name} is regulated under federal consumer protection laws. For
           more information about your rights as a borrower, visit the{" "}
           <a
             href="https://www.consumerfinance.gov/consumer-tools/payday-loans/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-700 underline"
+            className="text-brand underline"
           >
             CFPB&apos;s payday loan resource page
           </a>
           .
         </p>
 
-        <div className="rounded-lg bg-green-50 p-6 text-center">
+        <div className="rounded-lg bg-brand-lighter p-6 text-center">
           <p className="mb-3 font-semibold text-gray-900">
             Ready to see your options?
           </p>
           <Link
             href="/apply"
-            className="inline-block rounded-lg bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800"
+            className="inline-block rounded-lg bg-brand px-6 py-3 font-semibold text-white hover:bg-brand-dark"
           >
             Apply Now
           </Link>

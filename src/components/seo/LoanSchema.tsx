@@ -1,4 +1,5 @@
 import { JsonLd } from "./JsonLd";
+import { siteConfig } from "@/lib/site.config";
 
 interface LoanSchemaProps {
   amount: number;
@@ -41,8 +42,8 @@ export function LoanSchema({
     },
     provider: {
       "@type": "Organization",
-      name: "FundingZest",
-      url: "https://fundingzest.com",
+      name: siteConfig.name,
+      url: siteConfig.url,
     },
   };
 

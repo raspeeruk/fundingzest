@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "@/lib/site.config";
 
 const FOOTER_LINKS = {
   "Loan Amounts": [
@@ -49,7 +50,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-500 transition-colors hover:text-green-700"
+                      className="text-sm text-gray-500 transition-colors hover:text-brand"
                     >
                       {link.label}
                     </Link>
@@ -64,12 +65,12 @@ export function Footer() {
           <div className="text-xs leading-relaxed text-gray-400">
             <p className="font-medium text-gray-500">Important Disclosures</p>
             <p className="mt-2">
-              FundingZest is a loan comparison service, not a lender. We connect
-              borrowers with lenders in our network and may receive compensation
-              when you are matched with a lender. The operator of this website is
-              not a lender, does not make credit decisions, and does not broker
-              loans. Your lender will provide you with specific terms and rates
-              upon approval.
+              {siteConfig.name} is a {siteConfig.voice.companyDescriptor}, not a
+              lender. We connect borrowers with lenders in our network and may
+              receive compensation when you are matched with a lender. The
+              operator of this website is not a lender, does not make credit
+              decisions, and does not broker loans. Your lender will provide you
+              with specific terms and rates upon approval.
             </p>
             <p className="mt-2">
               APR ranges and loan terms vary by lender and your individual
@@ -86,7 +87,8 @@ export function Footer() {
           </div>
 
           <p className="mt-6 text-xs text-gray-400">
-            &copy; {new Date().getFullYear()} FundingZest. All rights reserved.
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
+            reserved.
           </p>
         </div>
       </div>

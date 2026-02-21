@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, SITE_NAME, SITE_URL } from "@/lib/seo/metadata";
+import { createMetadata } from "@/lib/seo/metadata";
+import { SITE_NAME, SITE_URL, siteConfig } from "@/lib/site.config";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getPublishedLoanAmounts } from "@/lib/data/loanAmounts";
 
 export const metadata: Metadata = createMetadata({
   title: "Compare Personal Loans & Payday Loans Online",
   description:
-    "Compare personal loan and payday loan options from FundingZest's network of lenders. Bad credit considered. Apply in minutes, funds as soon as same day.",
+    `Compare personal loan and payday loan options from ${SITE_NAME}'s network of lenders. Bad credit considered. Apply in minutes, funds as soon as same day.`,
   path: "/",
 });
 
@@ -78,7 +79,7 @@ export default function HomePage() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      "Compare personal loan and payday loan options from FundingZest's network of lenders.",
+      `Compare personal loan and payday loan options from ${siteConfig.name}'s network of lenders.`,
     potentialAction: {
       "@type": "SearchAction",
       target: `${SITE_URL}/borrow/{search_term_string}`,
@@ -91,22 +92,22 @@ export default function HomePage() {
       <JsonLd data={websiteSchema} />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-green-50 to-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      <section className="bg-gradient-to-b from-brand-lighter to-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             Compare Loan Options.
             <br />
-            <span className="text-green-700">Find Your Best Rate.</span>
+            <span className="text-brand">Find Your Best Rate.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
-            FundingZest connects you with lenders offering personal loans from
+            {siteConfig.name} connects you with lenders offering personal loans from
             $100 to $35,000. Compare rates, terms, and fees from multiple
             lenders &mdash; all in one place.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/apply"
-              className="rounded-lg bg-green-700 px-8 py-3.5 text-lg font-semibold text-white transition-colors hover:bg-green-800"
+              className="rounded-lg bg-brand px-8 py-3.5 text-lg font-semibold text-white transition-colors hover:bg-brand-dark"
             >
               See My Options
             </Link>
@@ -133,15 +134,15 @@ export default function HomePage() {
             <Link
               key={loan.slug}
               href={`/borrow/${loan.slug}`}
-              className="group rounded-lg border border-gray-200 p-5 transition-all hover:border-green-300 hover:shadow-md"
+              className="group rounded-lg border border-gray-200 p-5 transition-all hover:border-brand-light hover:shadow-md"
             >
-              <p className="text-2xl font-bold text-green-700 group-hover:text-green-800">
+              <p className="text-2xl font-bold text-brand group-hover:text-brand-dark">
                 {loan.displayAmount}
               </p>
               <p className="mt-1 text-sm text-gray-500">
                 APR from {loan.minApr}%
               </p>
-              <p className="mt-3 text-xs font-medium text-green-600 opacity-0 transition-opacity group-hover:opacity-100">
+              <p className="mt-3 text-xs font-medium text-brand-accent opacity-0 transition-opacity group-hover:opacity-100">
                 Compare options &rarr;
               </p>
             </Link>
@@ -150,7 +151,7 @@ export default function HomePage() {
         <div className="mt-6 text-center">
           <Link
             href="/borrow"
-            className="text-sm font-medium text-green-700 hover:text-green-800"
+            className="text-sm font-medium text-brand hover:text-brand-dark"
           >
             View all loan amounts &rarr;
           </Link>
@@ -161,7 +162,7 @@ export default function HomePage() {
       <section className="bg-gray-50 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="mb-2 text-center text-2xl font-bold text-gray-900">
-            How FundingZest Works
+            How {siteConfig.name} Works
           </h2>
           <p className="mb-10 text-center text-gray-600">
             Three simple steps to compare loan options.
@@ -185,7 +186,7 @@ export default function HomePage() {
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-lg font-bold text-green-700">
+                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand-light text-lg font-bold text-brand">
                   {item.step}
                 </span>
                 <h3 className="mt-4 text-lg font-semibold text-gray-900">
@@ -211,7 +212,7 @@ export default function HomePage() {
             <Link
               key={type.href}
               href={type.href}
-              className="rounded-lg border border-gray-200 p-5 transition-all hover:border-green-300 hover:shadow-md"
+              className="rounded-lg border border-gray-200 p-5 transition-all hover:border-brand-light hover:shadow-md"
             >
               <h3 className="font-semibold text-gray-900">{type.name}</h3>
               <p className="mt-1 text-sm text-gray-500">{type.description}</p>
@@ -224,7 +225,7 @@ export default function HomePage() {
       <section className="bg-gray-50 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="mb-10 text-center text-2xl font-bold text-gray-900">
-            Why Choose FundingZest
+            Why Choose {siteConfig.name}
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {TRUST_POINTS.map((point) => (
@@ -251,7 +252,7 @@ export default function HomePage() {
         <div className="grid gap-4 sm:grid-cols-3">
           <Link
             href="/calculator"
-            className="rounded-lg border border-gray-200 p-5 transition-all hover:border-green-300 hover:shadow-md"
+            className="rounded-lg border border-gray-200 p-5 transition-all hover:border-brand-light hover:shadow-md"
           >
             <h3 className="font-semibold text-gray-900">
               Loan Repayment Calculator
@@ -263,7 +264,7 @@ export default function HomePage() {
           </Link>
           <Link
             href="/guides"
-            className="rounded-lg border border-gray-200 p-5 transition-all hover:border-green-300 hover:shadow-md"
+            className="rounded-lg border border-gray-200 p-5 transition-all hover:border-brand-light hover:shadow-md"
           >
             <h3 className="font-semibold text-gray-900">
               Financial Guides
@@ -275,7 +276,7 @@ export default function HomePage() {
           </Link>
           <Link
             href="/states"
-            className="rounded-lg border border-gray-200 p-5 transition-all hover:border-green-300 hover:shadow-md"
+            className="rounded-lg border border-gray-200 p-5 transition-all hover:border-brand-light hover:shadow-md"
           >
             <h3 className="font-semibold text-gray-900">
               State Lending Laws
@@ -303,7 +304,7 @@ export default function HomePage() {
               href="https://www.consumerfinance.gov/consumer-tools/payday-loans/"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border border-gray-200 bg-white p-4 text-sm transition-colors hover:border-green-300"
+              className="rounded-lg border border-gray-200 bg-white p-4 text-sm transition-colors hover:border-brand-light"
             >
               <p className="font-medium text-gray-900">CFPB</p>
               <p className="mt-1 text-xs text-gray-500">
@@ -315,7 +316,7 @@ export default function HomePage() {
               href="https://consumer.ftc.gov/credit-loans-and-debt"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border border-gray-200 bg-white p-4 text-sm transition-colors hover:border-green-300"
+              className="rounded-lg border border-gray-200 bg-white p-4 text-sm transition-colors hover:border-brand-light"
             >
               <p className="font-medium text-gray-900">FTC</p>
               <p className="mt-1 text-xs text-gray-500">
@@ -327,7 +328,7 @@ export default function HomePage() {
               href="https://www.annualcreditreport.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border border-gray-200 bg-white p-4 text-sm transition-colors hover:border-green-300"
+              className="rounded-lg border border-gray-200 bg-white p-4 text-sm transition-colors hover:border-brand-light"
             >
               <p className="font-medium text-gray-900">
                 AnnualCreditReport.com
@@ -341,7 +342,7 @@ export default function HomePage() {
               href="https://www.211.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border border-gray-200 bg-white p-4 text-sm transition-colors hover:border-green-300"
+              className="rounded-lg border border-gray-200 bg-white p-4 text-sm transition-colors hover:border-brand-light"
             >
               <p className="font-medium text-gray-900">211.org</p>
               <p className="mt-1 text-xs text-gray-500">

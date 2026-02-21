@@ -12,7 +12,7 @@ export function QuickApplyWidget({ amount, state }: QuickApplyWidgetProps) {
   const href = `/apply${params.toString() ? `?${params.toString()}` : ""}`;
 
   return (
-    <div className="rounded-lg border border-green-200 bg-green-50 p-6">
+    <div className="rounded-lg border border-brand-light bg-brand-lighter p-6">
       <h3 className="mb-2 text-lg font-semibold text-gray-900">
         Ready to Apply?
       </h3>
@@ -22,7 +22,7 @@ export function QuickApplyWidget({ amount, state }: QuickApplyWidgetProps) {
       </p>
       <Link
         href={href}
-        className="block w-full rounded-lg bg-green-700 px-6 py-3 text-center font-semibold text-white transition-colors hover:bg-green-800"
+        className="block w-full rounded-lg bg-brand px-6 py-3 text-center font-semibold text-white transition-colors hover:bg-brand-dark"
       >
         See My Options
       </Link>

@@ -9,9 +9,9 @@ interface StatHighlightProps {
 
 const variantStyles = {
   green: {
-    container: "border-green-600 bg-green-50",
-    value: "text-green-800",
-    icon: "text-green-600",
+    container: "border-brand-accent bg-brand-lighter",
+    value: "text-brand-dark",
+    icon: "text-brand-accent",
   },
   red: {
     container: "border-red-500 bg-red-50",

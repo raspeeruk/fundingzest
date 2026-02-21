@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig, SITE_NAME } from "@/lib/site.config";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = createMetadata({
   title: "Advertiser Disclosure",
   description:
-    "Learn how FundingZest is compensated and how this may affect the products and lenders displayed on our site.",
+    `Learn how ${SITE_NAME} is compensated and how this may affect the products and lenders displayed on our site.`,
   path: "/advertiser-disclosure",
 });
 
@@ -25,7 +26,7 @@ export default function AdvertiserDisclosurePage() {
 
       <div className="space-y-6 text-gray-600">
         <p>
-          FundingZest is a free service for consumers. We are compensated by
+          {siteConfig.name} is a free service for consumers. We are compensated by
           lenders and financial service providers when consumers are connected
           with them through our platform. This page explains how our
           compensation model works and how it may affect what you see on our
@@ -75,7 +76,7 @@ export default function AdvertiserDisclosurePage() {
           products and lending regulations. Our editorial team reviews all
           content for accuracy and completeness. If you find any information on
           our site that appears inaccurate, please{" "}
-          <Link href="/contact" className="text-green-700 underline">
+          <Link href="/contact" className="text-brand underline">
             contact us
           </Link>
           .

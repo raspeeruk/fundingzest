@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { OrganizationSchema } from "@/components/seo/OrganizationSchema";
-import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/seo/metadata";
+import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/site.config";
 import "./globals.css";
 
 export const metadata: Metadata = {

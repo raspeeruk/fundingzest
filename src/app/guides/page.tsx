@@ -57,10 +57,10 @@ export default function GuidesPage() {
                 <Link
                   key={guide.frontmatter.slug}
                   href={`/guides/${guide.frontmatter.slug}`}
-                  className="block rounded-lg border border-gray-200 p-6 transition-colors hover:border-green-300 hover:bg-green-50/50"
+                  className="block rounded-lg border border-gray-200 p-6 transition-colors hover:border-brand-light hover:bg-brand-lighter/50"
                 >
                   <div className="mb-2 flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
+                    <span className="rounded-full bg-brand-light px-2.5 py-0.5 text-xs font-medium text-brand-dark">
                       {guide.frontmatter.category}
                     </span>
                     <span className="text-xs text-gray-400">
@@ -126,7 +126,7 @@ export default function GuidesPage() {
           </section>
         )}
 
-        <section className="rounded-lg bg-green-50 p-6">
+        <section className="rounded-lg bg-brand-lighter p-6">
           <h2 className="mb-2 text-lg font-bold text-gray-900">
             Explore More Resources
           </h2>
@@ -137,25 +137,25 @@ export default function GuidesPage() {
           <div className="flex flex-wrap gap-3">
             <Link
               href="/loans"
-              className="rounded-lg border border-green-200 bg-white px-4 py-2 text-sm font-medium text-green-700 transition-colors hover:bg-green-100"
+              className="rounded-lg border border-brand-light bg-white px-4 py-2 text-sm font-medium text-brand transition-colors hover:bg-brand-light"
             >
               Loan Types
             </Link>
             <Link
               href="/borrow"
-              className="rounded-lg border border-green-200 bg-white px-4 py-2 text-sm font-medium text-green-700 transition-colors hover:bg-green-100"
+              className="rounded-lg border border-brand-light bg-white px-4 py-2 text-sm font-medium text-brand transition-colors hover:bg-brand-light"
             >
               Browse Loan Amounts
             </Link>
             <Link
               href="/calculator"
-              className="rounded-lg border border-green-200 bg-white px-4 py-2 text-sm font-medium text-green-700 transition-colors hover:bg-green-100"
+              className="rounded-lg border border-brand-light bg-white px-4 py-2 text-sm font-medium text-brand transition-colors hover:bg-brand-light"
             >
               Loan Calculator
             </Link>
             <Link
               href="/states"
-              className="rounded-lg border border-green-200 bg-white px-4 py-2 text-sm font-medium text-green-700 transition-colors hover:bg-green-100"
+              className="rounded-lg border border-brand-light bg-white px-4 py-2 text-sm font-medium text-brand transition-colors hover:bg-brand-light"
             >
               State Regulations
             </Link>

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig, SITE_URL } from "@/lib/site.config";
 import {
   getGuideBySlug,
   getPublishedGuideSlugs,
@@ -19,12 +20,13 @@ import { StatsGrid } from "@/components/content/StatsGrid";
 import { Callout } from "@/components/content/Callout";
 import { ComparisonRow } from "@/components/content/ComparisonRow";
 
+// Force SSR for guide pages — Turbopack SSG has a known issue with
+// MDX-compiled JSX expression props (arrays/objects) during prerendering.
+// Dev mode and SSR work correctly; only static generation fails.
+export const dynamic = "force-dynamic";
+
 interface Props {
   params: Promise<{ slug: string }>;
-}
-
-export async function generateStaticParams() {
-  return getPublishedGuideSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -48,7 +50,7 @@ function ApplyButton({ amount, text }: { amount: number; text: string }) {
     <div className="my-8 text-center">
       <Link
         href={`/apply?amount=${amount}`}
-        className="inline-block rounded-lg bg-green-700 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-green-800"
+        className="inline-block rounded-lg bg-brand px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-brand-dark"
       >
         {text}
       </Link>
@@ -72,7 +74,7 @@ const mdxComponents = {
   }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
     if (href?.startsWith("/")) {
       return (
-        <Link href={href} className="text-green-700 underline" {...props}>
+        <Link href={href} className="text-brand underline" {...props}>
           {children}
         </Link>
       );
@@ -80,7 +82,7 @@ const mdxComponents = {
     return (
       <a
         href={href}
-        className="text-green-700 underline"
+        className="text-brand underline"
         target="_blank"
         rel="noopener noreferrer"
         {...props}
@@ -190,7 +192,7 @@ const mdxComponents = {
     ...props
   }: React.BlockquoteHTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
-      className="my-4 border-l-4 border-green-600 bg-green-50 py-3 pl-4 pr-4 text-gray-700"
+      className="my-4 border-l-4 border-brand-accent bg-brand-lighter py-3 pl-4 pr-4 text-gray-700"
       {...props}
     >
       {children}
@@ -223,7 +225,7 @@ function TableOfContents({ content }: { content: string }) {
           <li key={item.id}>
             <a
               href={`#${item.id}`}
-              className="text-sm text-green-700 hover:underline"
+              className="text-sm text-brand hover:underline"
             >
               {item.text}
             </a>
@@ -248,27 +250,27 @@ export default async function GuidePage({ params }: Props) {
     description: frontmatter.description,
     datePublished: frontmatter.publishedDate,
     dateModified: frontmatter.updatedDate,
-    url: `https://fundingzest.com/guides/${frontmatter.slug}`,
+    url: `${SITE_URL}/guides/${frontmatter.slug}`,
     author: {
       "@type": "Person",
       name: frontmatter.author.name,
-      url: `https://fundingzest.com/authors/${frontmatter.author.slug}`,
+      url: `${SITE_URL}/authors/${frontmatter.author.slug}`,
       jobTitle: frontmatter.author.credentials,
     },
     reviewer: {
       "@type": "Person",
       name: frontmatter.reviewer.name,
-      url: `https://fundingzest.com/authors/${frontmatter.reviewer.slug}`,
+      url: `${SITE_URL}/authors/${frontmatter.reviewer.slug}`,
       jobTitle: frontmatter.reviewer.credentials,
     },
     publisher: {
       "@type": "Organization",
-      name: "FundingZest",
-      url: "https://fundingzest.com",
+      name: siteConfig.name,
+      url: SITE_URL,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://fundingzest.com/guides/${frontmatter.slug}`,
+      "@id": `${SITE_URL}/guides/${frontmatter.slug}`,
     },
   };
 
@@ -293,7 +295,7 @@ export default async function GuidePage({ params }: Props) {
         {/* Article header */}
         <header className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-green-100 px-3 py-0.5 text-xs font-medium text-green-800">
+            <span className="rounded-full bg-brand-light px-3 py-0.5 text-xs font-medium text-brand-dark">
               {frontmatter.category}
             </span>
             <span className="text-sm text-gray-500">
@@ -312,7 +314,7 @@ export default async function GuidePage({ params }: Props) {
           {/* Author and reviewer info */}
           <div className="flex flex-wrap items-center gap-4 border-t border-b border-gray-200 py-4 text-sm">
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-light text-xs font-bold text-brand">
                 {frontmatter.author.name
                   .split(" ")
                   .map((n) => n[0])
@@ -322,7 +324,7 @@ export default async function GuidePage({ params }: Props) {
                 <span className="text-gray-500">Written by </span>
                 <Link
                   href={`/authors/${frontmatter.author.slug}`}
-                  className="font-medium text-green-700 hover:underline"
+                  className="font-medium text-brand hover:underline"
                 >
                   {frontmatter.author.name}
                 </Link>
@@ -345,7 +347,7 @@ export default async function GuidePage({ params }: Props) {
                 <span className="text-gray-500">Reviewed by </span>
                 <Link
                   href={`/authors/${frontmatter.reviewer.slug}`}
-                  className="font-medium text-green-700 hover:underline"
+                  className="font-medium text-brand hover:underline"
                 >
                   {frontmatter.reviewer.name}
                 </Link>
@@ -398,7 +400,7 @@ export default async function GuidePage({ params }: Props) {
         {/* Author byline at bottom */}
         <div className="mt-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
           <div className="flex items-start gap-4">
-            <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-lg font-bold text-green-700">
+            <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-brand-light text-lg font-bold text-brand">
               {frontmatter.author.name
                 .split(" ")
                 .map((n) => n[0])
@@ -411,16 +413,16 @@ export default async function GuidePage({ params }: Props) {
               <p className="mt-1 text-sm text-gray-600">
                 <Link
                   href={`/authors/${frontmatter.author.slug}`}
-                  className="font-medium text-green-700 hover:underline"
+                  className="font-medium text-brand hover:underline"
                 >
                   {frontmatter.author.name}
                 </Link>{" "}
                 ({frontmatter.author.credentials}) writes about personal finance,
-                consumer lending, and financial literacy for FundingZest. This
+                consumer lending, and financial literacy for {siteConfig.name}. This
                 article was reviewed for accuracy by{" "}
                 <Link
                   href={`/authors/${frontmatter.reviewer.slug}`}
-                  className="font-medium text-green-700 hover:underline"
+                  className="font-medium text-brand hover:underline"
                 >
                   {frontmatter.reviewer.name}
                 </Link>{" "}
@@ -440,17 +442,17 @@ export default async function GuidePage({ params }: Props) {
         </div>
 
         {/* Related guides / CTA */}
-        <div className="mt-8 rounded-lg bg-green-50 p-6 text-center">
+        <div className="mt-8 rounded-lg bg-brand-lighter p-6 text-center">
           <p className="mb-2 font-semibold text-gray-900">
             Ready to explore your options?
           </p>
           <p className="mb-4 text-sm text-gray-600">
-            Compare loan offers from FundingZest&apos;s network of lenders. Free to
+            Compare loan offers from {siteConfig.name}&apos;s network of lenders. Free to
             use, no impact on your credit score.
           </p>
           <Link
             href="/apply"
-            className="inline-block rounded-lg bg-green-700 px-6 py-2.5 font-semibold text-white transition-colors hover:bg-green-800"
+            className="inline-block rounded-lg bg-brand px-6 py-2.5 font-semibold text-white transition-colors hover:bg-brand-dark"
           >
             Compare Loan Options
           </Link>

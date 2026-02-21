@@ -1,4 +1,5 @@
 import type { LoanAmount } from "@/types/loan";
+import { SITE_NAME } from "@/lib/site.config";
 import loanAmountsData from "../../../public/data/loan-amounts.json";
 
 const LOAN_AMOUNTS: LoanAmount[] = loanAmountsData.map((item) => ({
@@ -7,7 +8,7 @@ const LOAN_AMOUNTS: LoanAmount[] = loanAmountsData.map((item) => ({
   maxApr: item.amount <= 1000 ? 664 : item.amount <= 5000 ? 199 : 36,
   minTermMonths: item.amount <= 500 ? 1 : item.amount <= 2000 ? 3 : 6,
   maxTermMonths: item.amount <= 500 ? 6 : item.amount <= 5000 ? 24 : 60,
-  description: `Compare ${item.displayAmount} loan options from FundingZest's lender network. Bad credit considered. Apply in minutes.`,
+  description: `Compare ${item.displayAmount} loan options from ${SITE_NAME}'s lender network. Bad credit considered. Apply in minutes.`,
 }));
 
 /** All loan amounts regardless of published status */

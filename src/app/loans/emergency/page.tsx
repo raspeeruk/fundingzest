@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig } from "@/lib/site.config";
 import { getPublishedLoanAmounts } from "@/lib/data/loanAmounts";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { BLUFSummary } from "@/components/content/BLUFSummary";
@@ -90,7 +91,7 @@ export default function EmergencyLoansPage() {
                 provide a way to cover these expenses and repay over time.
               </p>
               <p className="text-gray-600">
-                FundingZest connects you with lenders who specialize in fast
+                {siteConfig.name} connects you with lenders who specialize in fast
                 approvals and quick funding. Compare multiple offers to find the
                 best rates and terms for your situation.
               </p>
@@ -140,7 +141,7 @@ export default function EmergencyLoansPage() {
                     <p className="font-semibold text-gray-900">
                       {item.expense}
                     </p>
-                    <p className="text-sm text-green-700">{item.typical}</p>
+                    <p className="text-sm text-brand">{item.typical}</p>
                     <p className="text-xs text-gray-500">{item.note}</p>
                   </div>
                 ))}
@@ -271,7 +272,7 @@ export default function EmergencyLoansPage() {
                   <Link
                     key={loan.slug}
                     href={`/borrow/${loan.slug}`}
-                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-green-300 hover:bg-green-50 hover:text-green-700"
+                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-brand-light hover:bg-brand-lighter hover:text-brand"
                   >
                     {loan.displayAmount}
                   </Link>
@@ -287,28 +288,28 @@ export default function EmergencyLoansPage() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <Link
                   href="/loans/same-day"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Same Day Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Get funds deposited as fast as today</p>
                 </Link>
                 <Link
                   href="/loans/payday"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Payday Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Short-term loans repaid on your next payday</p>
                 </Link>
                 <Link
                   href="/loans/bad-credit"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Bad Credit Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Options for borrowers with all credit types</p>
                 </Link>
                 <Link
                   href="/loans/installment"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Installment Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Manageable payments spread over months</p>
@@ -323,19 +324,19 @@ export default function EmergencyLoansPage() {
               </h2>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">211.org</a>
+                  <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" className="text-brand underline">211.org</a>
                   {" "}<span className="text-gray-500">— Connect with local assistance for utilities, rent, food, and medical bills</span>
                 </li>
                 <li>
-                  <a href="https://www.consumerfinance.gov/consumer-tools/payday-loans/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">CFPB — Payday Loans</a>
+                  <a href="https://www.consumerfinance.gov/consumer-tools/payday-loans/" target="_blank" rel="noopener noreferrer" className="text-brand underline">CFPB — Payday Loans</a>
                   {" "}<span className="text-gray-500">— Know your rights before borrowing</span>
                 </li>
                 <li>
-                  <a href="https://www.benefits.gov/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">Benefits.gov</a>
+                  <a href="https://www.benefits.gov/" target="_blank" rel="noopener noreferrer" className="text-brand underline">Benefits.gov</a>
                   {" "}<span className="text-gray-500">— Find government assistance programs you may qualify for</span>
                 </li>
                 <li>
-                  <a href="https://www.ncua.gov/consumers/financial-literacy-resources" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">NCUA — Payday Alternative Loans</a>
+                  <a href="https://www.ncua.gov/consumers/financial-literacy-resources" target="_blank" rel="noopener noreferrer" className="text-brand underline">NCUA — Payday Alternative Loans</a>
                   {" "}<span className="text-gray-500">— Lower-cost alternatives from federal credit unions</span>
                 </li>
               </ul>

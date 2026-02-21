@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig, SITE_NAME } from "@/lib/site.config";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = createMetadata({
   title: "Terms of Service",
-  description: "FundingZest terms of service. Read the terms and conditions for using our loan comparison platform.",
+  description: `${SITE_NAME} terms of service. Read the terms and conditions for using our loan comparison platform.`,
   path: "/terms-of-service",
 });
 
@@ -19,12 +20,12 @@ export default function TermsOfServicePage() {
 
       <div className="space-y-6 text-gray-600">
         <p>
-          By using FundingZest (&ldquo;the Service&rdquo;), you agree to these Terms of Service. Please read them carefully.
+          By using {siteConfig.name} (&ldquo;the Service&rdquo;), you agree to these Terms of Service. Please read them carefully.
         </p>
 
         <h2 className="text-xl font-bold text-gray-900">Service Description</h2>
         <p>
-          FundingZest is a loan comparison service that connects consumers with lenders. We are not a lender, do not make credit decisions, and do not guarantee that you will receive a loan offer. The lenders in our network independently determine whether to offer you a loan, and what rates and terms to provide.
+          {siteConfig.name} is a loan comparison service that connects consumers with lenders. We are not a lender, do not make credit decisions, and do not guarantee that you will receive a loan offer. The lenders in our network independently determine whether to offer you a loan, and what rates and terms to provide.
         </p>
 
         <h2 className="text-xl font-bold text-gray-900">Eligibility</h2>
@@ -34,35 +35,35 @@ export default function TermsOfServicePage() {
 
         <h2 className="text-xl font-bold text-gray-900">No Guarantee of Loan Offers</h2>
         <p>
-          Submitting your information through FundingZest does not guarantee that you will receive a loan offer. Approval decisions are made solely by the lenders in our network based on their own criteria.
+          Submitting your information through {siteConfig.name} does not guarantee that you will receive a loan offer. Approval decisions are made solely by the lenders in our network based on their own criteria.
         </p>
 
         <h2 className="text-xl font-bold text-gray-900">Third-Party Lenders</h2>
         <p>
-          When you are connected with a lender through our platform, your relationship with that lender is governed by their own terms, conditions, and privacy policy. FundingZest is not responsible for the actions, products, or services of any third-party lender.
+          When you are connected with a lender through our platform, your relationship with that lender is governed by their own terms, conditions, and privacy policy. {siteConfig.name} is not responsible for the actions, products, or services of any third-party lender.
         </p>
 
         <h2 className="text-xl font-bold text-gray-900">Limitation of Liability</h2>
         <p>
-          FundingZest provides information for general educational purposes. We are not financial advisors and do not provide financial advice. You should consult with a qualified financial professional before making any borrowing decisions. Our service is provided &ldquo;as is&rdquo; without warranties of any kind.
+          {siteConfig.name} provides information for general educational purposes. We are not financial advisors and do not provide financial advice. You should consult with a qualified financial professional before making any borrowing decisions. Our service is provided &ldquo;as is&rdquo; without warranties of any kind.
         </p>
 
         <h2 className="text-xl font-bold text-gray-900">Contact</h2>
         <p>
           For questions about these terms, contact us at{" "}
-          <a href="mailto:legal@fundingzest.com" className="text-green-700 underline">legal@fundingzest.com</a>.
+          <a href={`mailto:${siteConfig.emails.legal}`} className="text-brand underline">{siteConfig.emails.legal}</a>.
         </p>
 
         <h2 className="text-xl font-bold text-gray-900">Related Policies</h2>
         <ul className="list-inside list-disc space-y-1">
           <li>
-            <Link href="/privacy-policy" className="text-green-700 underline">Privacy Policy</Link> &mdash; how we handle your personal information
+            <Link href="/privacy-policy" className="text-brand underline">Privacy Policy</Link> &mdash; how we handle your personal information
           </li>
           <li>
-            <Link href="/advertiser-disclosure" className="text-green-700 underline">Advertiser Disclosure</Link>
+            <Link href="/advertiser-disclosure" className="text-brand underline">Advertiser Disclosure</Link>
           </li>
           <li>
-            <Link href="/contact" className="text-green-700 underline">Contact Us</Link>
+            <Link href="/contact" className="text-brand underline">Contact Us</Link>
           </li>
         </ul>
       </div>

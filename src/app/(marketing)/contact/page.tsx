@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig, SITE_NAME } from "@/lib/site.config";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = createMetadata({
   title: "Contact Us",
   description:
-    "Get in touch with FundingZest. Questions about our service, feedback, or press inquiries.",
+    `Get in touch with ${SITE_NAME}. Questions about our service, feedback, or press inquiries.`,
   path: "/contact",
 });
 
@@ -19,7 +20,7 @@ export default function ContactPage() {
 
       <div className="space-y-6 text-gray-600">
         <p>
-          Have questions about FundingZest? We&apos;re here to help. You can reach
+          Have questions about {siteConfig.name}? We&apos;re here to help. You can reach
           us through the following channels:
         </p>
 
@@ -29,10 +30,10 @@ export default function ContactPage() {
               <dt className="font-semibold text-gray-900">Email</dt>
               <dd>
                 <a
-                  href="mailto:support@fundingzest.com"
-                  className="text-green-700 underline"
+                  href={`mailto:${siteConfig.emails.support}`}
+                  className="text-brand underline"
                 >
-                  support@fundingzest.com
+                  {siteConfig.emails.support}
                 </a>
               </dd>
             </div>
@@ -46,7 +47,7 @@ export default function ContactPage() {
         <h2 className="text-xl font-bold text-gray-900">Common Questions</h2>
         <p>
           Before reaching out, you may find the answer to your question in our{" "}
-          <Link href="/guides" className="text-green-700 underline">
+          <Link href="/guides" className="text-brand underline">
             guides section
           </Link>{" "}
           or on the FAQ section of any loan page.
@@ -56,7 +57,7 @@ export default function ContactPage() {
           Important: We Are Not a Lender
         </h2>
         <p>
-          FundingZest is a comparison service, not a lender. If you have
+          {siteConfig.name} is a comparison service, not a lender. If you have
           questions about an existing loan, payment, or account, please contact
           your lender directly. We cannot access, modify, or provide information
           about individual loan accounts.

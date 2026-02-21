@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+@theme {
+  /* Brand colors — change these 5 values to rebrand the entire site */
+  --color-brand: #15803d;
+  --color-brand-dark: #166534;
+  --color-brand-light: #dcfce7;
+  --color-brand-lighter: #f0fdf4;
+  --color-brand-accent: #16a34a;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

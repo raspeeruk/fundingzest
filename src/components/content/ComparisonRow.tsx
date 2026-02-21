@@ -17,9 +17,9 @@ interface ComparisonRowProps {
 
 const optionStyles = {
   green: {
-    border: "border-green-300",
-    bg: "bg-green-50",
-    title: "text-green-800",
+    border: "border-brand-light",
+    bg: "bg-brand-lighter",
+    title: "text-brand-dark",
   },
   red: {
     border: "border-red-200",
@@ -34,6 +34,7 @@ const optionStyles = {
 };
 
 export function ComparisonRow({ title, options }: ComparisonRowProps) {
+  if (!options) return null;
   return (
     <div className="my-8" role="region" aria-label={title ?? "Comparison"}>
       {title && (
@@ -48,7 +49,7 @@ export function ComparisonRow({ title, options }: ComparisonRowProps) {
               className={`relative rounded-lg border-2 p-5 ${style.border} ${style.bg}`}
             >
               {option.recommended && (
-                <span className="absolute -top-3 left-4 rounded-full bg-green-700 px-3 py-0.5 text-xs font-medium text-white">
+                <span className="absolute -top-3 left-4 rounded-full bg-brand px-3 py-0.5 text-xs font-medium text-white">
                   Better Option
                 </span>
               )}

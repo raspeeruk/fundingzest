@@ -73,7 +73,7 @@ export default function CalculatorPage() {
           </p>
         </div>
 
-        <div className="mt-8 rounded-lg bg-green-50 p-6">
+        <div className="mt-8 rounded-lg bg-brand-lighter p-6">
           <h2 className="mb-2 text-lg font-bold text-gray-900">
             Ready to Compare Actual Loan Offers?
           </h2>
@@ -84,7 +84,7 @@ export default function CalculatorPage() {
           <div className="flex flex-wrap gap-3">
             <Link
               href="/apply"
-              className="rounded-lg bg-green-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-green-800"
+              className="rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
             >
               See My Options
             </Link>
@@ -104,25 +104,25 @@ export default function CalculatorPage() {
           <div className="grid gap-2 sm:grid-cols-2">
             <Link
               href="/loans/payday"
-              className="rounded border border-gray-200 px-3 py-2 text-sm text-gray-600 transition-colors hover:border-green-300 hover:text-green-700"
+              className="rounded border border-gray-200 px-3 py-2 text-sm text-gray-600 transition-colors hover:border-brand-light hover:text-brand"
             >
               Payday Loans (200%–664% APR)
             </Link>
             <Link
               href="/loans/installment"
-              className="rounded border border-gray-200 px-3 py-2 text-sm text-gray-600 transition-colors hover:border-green-300 hover:text-green-700"
+              className="rounded border border-gray-200 px-3 py-2 text-sm text-gray-600 transition-colors hover:border-brand-light hover:text-brand"
             >
               Installment Loans (6%–199% APR)
             </Link>
             <Link
               href="/loans/bad-credit"
-              className="rounded border border-gray-200 px-3 py-2 text-sm text-gray-600 transition-colors hover:border-green-300 hover:text-green-700"
+              className="rounded border border-gray-200 px-3 py-2 text-sm text-gray-600 transition-colors hover:border-brand-light hover:text-brand"
             >
               Bad Credit Loans
             </Link>
             <Link
               href="/loans/same-day"
-              className="rounded border border-gray-200 px-3 py-2 text-sm text-gray-600 transition-colors hover:border-green-300 hover:text-green-700"
+              className="rounded border border-gray-200 px-3 py-2 text-sm text-gray-600 transition-colors hover:border-brand-light hover:text-brand"
             >
               Same Day Loans
             </Link>
@@ -137,7 +137,7 @@ export default function CalculatorPage() {
             <li>
               <Link
                 href="/guides/understanding-apr-small-dollar-loans"
-                className="text-green-700 underline"
+                className="text-brand underline"
               >
                 Understanding APR on Small Dollar Loans
               </Link>{" "}
@@ -146,7 +146,7 @@ export default function CalculatorPage() {
             <li>
               <Link
                 href="/guides/how-payday-loans-work"
-                className="text-green-700 underline"
+                className="text-brand underline"
               >
                 How Payday Loans Work
               </Link>{" "}
@@ -157,7 +157,7 @@ export default function CalculatorPage() {
                 href="https://www.consumerfinance.gov/consumer-tools/payday-loans/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-700 underline"
+                className="text-brand underline"
               >
                 CFPB Payday Loan Resources
               </a>{" "}
@@ -166,7 +166,7 @@ export default function CalculatorPage() {
             <li>
               <Link
                 href="/states"
-                className="text-green-700 underline"
+                className="text-brand underline"
               >
                 State Lending Regulations
               </Link>{" "}

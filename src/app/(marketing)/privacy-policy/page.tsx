@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig, SITE_NAME } from "@/lib/site.config";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = createMetadata({
   title: "Privacy Policy",
-  description: "FundingZest privacy policy. Learn how we collect, use, and protect your personal information.",
+  description: `${SITE_NAME} privacy policy. Learn how we collect, use, and protect your personal information.`,
   path: "/privacy-policy",
 });
 
@@ -19,7 +20,7 @@ export default function PrivacyPolicyPage() {
 
       <div className="space-y-6 text-gray-600">
         <p>
-          This Privacy Policy describes how FundingZest (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) collects, uses, and shares your personal information when you use our website and services.
+          This Privacy Policy describes how {siteConfig.name} (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) collects, uses, and shares your personal information when you use our website and services.
         </p>
 
         <h2 className="text-xl font-bold text-gray-900">Information We Collect</h2>
@@ -54,25 +55,25 @@ export default function PrivacyPolicyPage() {
         <h2 className="text-xl font-bold text-gray-900">Your Rights</h2>
         <p>
           Depending on your state of residence, you may have rights regarding your personal information, including the right to access, correct, or delete your data. California residents have additional rights under the CCPA. Contact us at{" "}
-          <a href="mailto:privacy@fundingzest.com" className="text-green-700 underline">privacy@fundingzest.com</a> to exercise your rights.
+          <a href={`mailto:${siteConfig.emails.privacy}`} className="text-brand underline">{siteConfig.emails.privacy}</a> to exercise your rights.
         </p>
 
         <h2 className="text-xl font-bold text-gray-900">Contact</h2>
         <p>
           For privacy-related questions, contact us at{" "}
-          <a href="mailto:privacy@fundingzest.com" className="text-green-700 underline">privacy@fundingzest.com</a>.
+          <a href={`mailto:${siteConfig.emails.privacy}`} className="text-brand underline">{siteConfig.emails.privacy}</a>.
         </p>
 
         <h2 className="text-xl font-bold text-gray-900">Related Policies</h2>
         <ul className="list-inside list-disc space-y-1">
           <li>
-            <Link href="/terms-of-service" className="text-green-700 underline">Terms of Service</Link>
+            <Link href="/terms-of-service" className="text-brand underline">Terms of Service</Link>
           </li>
           <li>
-            <Link href="/advertiser-disclosure" className="text-green-700 underline">Advertiser Disclosure</Link> &mdash; how we earn revenue and how it affects our site
+            <Link href="/advertiser-disclosure" className="text-brand underline">Advertiser Disclosure</Link> &mdash; how we earn revenue and how it affects our site
           </li>
           <li>
-            <Link href="/contact" className="text-green-700 underline">Contact Us</Link>
+            <Link href="/contact" className="text-brand underline">Contact Us</Link>
           </li>
         </ul>
       </div>

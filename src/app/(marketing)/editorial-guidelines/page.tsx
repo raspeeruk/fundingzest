@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig, SITE_NAME } from "@/lib/site.config";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = createMetadata({
   title: "Editorial Guidelines",
   description:
-    "Learn about FundingZest's editorial standards, content review process, and commitment to accurate financial information.",
+    `Learn about ${SITE_NAME}'s editorial standards, content review process, and commitment to accurate financial information.`,
   path: "/editorial-guidelines",
 });
 
@@ -25,7 +26,7 @@ export default function EditorialGuidelinesPage() {
 
       <div className="space-y-6 text-gray-600">
         <p>
-          At FundingZest, we are committed to providing accurate, helpful, and
+          At {siteConfig.name}, we are committed to providing accurate, helpful, and
           transparent financial information. These guidelines outline how we
           create, review, and maintain our content.
         </p>
@@ -52,7 +53,7 @@ export default function EditorialGuidelinesPage() {
 
         <h2 className="text-xl font-bold text-gray-900">Review Process</h2>
         <p>
-          Every piece of content on FundingZest goes through the following
+          Every piece of content on {siteConfig.name} goes through the following
           review process:
         </p>
         <ol className="list-inside list-decimal space-y-2">
@@ -72,7 +73,7 @@ export default function EditorialGuidelinesPage() {
           review and update our content regularly. Every page displays a
           &ldquo;Last Updated&rdquo; date so you know when the information was
           last verified. If you notice any inaccurate information, please{" "}
-          <Link href="/contact" className="text-green-700 underline">
+          <Link href="/contact" className="text-brand underline">
             let us know
           </Link>
           .
@@ -88,7 +89,7 @@ export default function EditorialGuidelinesPage() {
           provide about loan products. See our{" "}
           <Link
             href="/advertiser-disclosure"
-            className="text-green-700 underline"
+            className="text-brand underline"
           >
             advertiser disclosure
           </Link>{" "}

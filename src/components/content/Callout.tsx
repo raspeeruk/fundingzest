@@ -8,9 +8,9 @@ interface CalloutProps {
 
 const typeConfig = {
   tip: {
-    container: "border-green-600 bg-green-50",
-    title: "text-green-800",
-    icon: "text-green-600",
+    container: "border-brand-accent bg-brand-lighter",
+    title: "text-brand-dark",
+    icon: "text-brand-accent",
     iconName: "check" as const,
     defaultTitle: "Tip",
   },

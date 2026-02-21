@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig } from "@/lib/site.config";
 import { getPublishedLoanAmounts } from "@/lib/data/loanAmounts";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { BLUFSummary } from "@/components/content/BLUFSummary";
@@ -21,7 +22,7 @@ const faqs = [
   {
     question: "What credit score is considered bad credit?",
     answer:
-      "FICO scores below 580 are generally considered 'poor' credit, while scores between 580 and 669 are 'fair.' Many lenders in FundingZest's network consider applicants with scores below 580 or even those with no credit history at all. Your credit score is just one factor lenders evaluate.",
+      `FICO scores below 580 are generally considered 'poor' credit, while scores between 580 and 669 are 'fair.' Many lenders in ${siteConfig.name}'s network consider applicants with scores below 580 or even those with no credit history at all. Your credit score is just one factor lenders evaluate.`,
   },
   {
     question: "Can I really get a loan with bad credit?",
@@ -31,7 +32,7 @@ const faqs = [
   {
     question: "Will applying for a bad credit loan hurt my credit score?",
     answer:
-      "Submitting your information through FundingZest does not affect your credit score. Some lenders perform a soft credit check during pre-qualification, which has no impact. If you proceed with a lender and they perform a hard credit check, that may temporarily lower your score by a few points.",
+      `Submitting your information through ${siteConfig.name} does not affect your credit score. Some lenders perform a soft credit check during pre-qualification, which has no impact. If you proceed with a lender and they perform a hard credit check, that may temporarily lower your score by a few points.`,
   },
   {
     question: "What interest rates can I expect with bad credit?",
@@ -164,13 +165,13 @@ export default function BadCreditLoansPage() {
               <ol className="space-y-3">
                 {[
                   "Check your credit score for free through your bank or a service like Credit Karma so you know where you stand.",
-                  "Compare options through FundingZest to see rates and terms from multiple lenders at once.",
+                  `Compare options through ${siteConfig.name} to see rates and terms from multiple lenders at once.`,
                   "Only borrow what you need and can realistically repay. Overborrowing leads to debt cycles.",
                   "Review the full loan terms including APR, fees, total repayment amount, and due dates before accepting.",
                   "Make payments on time to avoid additional fees and to begin building a positive credit history.",
                 ].map((step, i) => (
                   <li key={i} className="flex gap-3 text-gray-600">
-                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-light text-xs font-bold text-brand">
                       {i + 1}
                     </span>
                     {step}
@@ -226,7 +227,7 @@ export default function BadCreditLoansPage() {
                   <Link
                     key={loan.slug}
                     href={`/borrow/${loan.slug}`}
-                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-green-300 hover:bg-green-50 hover:text-green-700"
+                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-brand-light hover:bg-brand-lighter hover:text-brand"
                   >
                     {loan.displayAmount}
                   </Link>
@@ -242,28 +243,28 @@ export default function BadCreditLoansPage() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <Link
                   href="/loans/payday"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Payday Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Short-term loans repaid on your next payday</p>
                 </Link>
                 <Link
                   href="/loans/no-credit-check"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">No Credit Check Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Apply without a hard inquiry on your credit report</p>
                 </Link>
                 <Link
                   href="/loans/installment"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Installment Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Fixed monthly payments over longer terms</p>
                 </Link>
                 <Link
                   href="/loans/emergency"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Emergency Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Quick funding for unexpected expenses</p>
@@ -278,19 +279,19 @@ export default function BadCreditLoansPage() {
               </h2>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">CFPB — Credit Reports and Scores</a>
+                  <a href="https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/" target="_blank" rel="noopener noreferrer" className="text-brand underline">CFPB — Credit Reports and Scores</a>
                   {" "}<span className="text-gray-500">— Understand your credit report and how to dispute errors</span>
                 </li>
                 <li>
-                  <a href="https://www.annualcreditreport.com/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">AnnualCreditReport.com</a>
+                  <a href="https://www.annualcreditreport.com/" target="_blank" rel="noopener noreferrer" className="text-brand underline">AnnualCreditReport.com</a>
                   {" "}<span className="text-gray-500">— Get your free annual credit report from all three bureaus</span>
                 </li>
                 <li>
-                  <a href="https://www.myfico.com/credit-education/credit-scores" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">myFICO — Understanding Credit Scores</a>
+                  <a href="https://www.myfico.com/credit-education/credit-scores" target="_blank" rel="noopener noreferrer" className="text-brand underline">myFICO — Understanding Credit Scores</a>
                   {" "}<span className="text-gray-500">— Learn how FICO scores work and what affects them</span>
                 </li>
                 <li>
-                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">FTC — Borrowing and Credit</a>
+                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-brand underline">FTC — Borrowing and Credit</a>
                   {" "}<span className="text-gray-500">— Federal guidance on avoiding lending scams</span>
                 </li>
               </ul>

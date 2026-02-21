@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo/metadata";
+import { siteConfig } from "@/lib/site.config";
 import { getPaydayLegalStates, getAllStates } from "@/lib/data/states";
 import { getPublishedLoanAmounts } from "@/lib/data/loanAmounts";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -57,7 +58,7 @@ const faqs = [
   {
     question: "Does applying for a payday loan affect my credit score?",
     answer:
-      "Submitting your information through FundingZest does not affect your credit score. Most payday lenders perform a soft credit check or no credit check during the application. However, if you fail to repay, the debt may be sent to collections, which can negatively impact your credit.",
+      `Submitting your information through ${siteConfig.name} does not affect your credit score. Most payday lenders perform a soft credit check or no credit check during the application. However, if you fail to repay, the debt may be sent to collections, which can negatively impact your credit.`,
   },
 ];
 
@@ -152,7 +153,7 @@ export default function PaydayLoansPage() {
                   },
                 ].map((item, i) => (
                   <li key={i} className="flex gap-4">
-                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-sm font-bold text-green-700">
+                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-light text-sm font-bold text-brand">
                       {i + 1}
                     </span>
                     <div>
@@ -221,23 +222,23 @@ export default function PaydayLoansPage() {
                 Pros and Cons of Payday Loans
               </h2>
               <div className="grid gap-6 sm:grid-cols-2">
-                <div className="rounded-lg border border-green-200 bg-green-50 p-5">
-                  <h3 className="mb-3 font-semibold text-green-800">Pros</h3>
+                <div className="rounded-lg border border-brand-light bg-brand-lighter p-5">
+                  <h3 className="mb-3 font-semibold text-brand-dark">Pros</h3>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="mt-0.5 text-green-600">&#10003;</span>
+                      <span className="mt-0.5 text-brand-accent">&#10003;</span>
                       Fast approval and funding (often next business day)
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="mt-0.5 text-green-600">&#10003;</span>
+                      <span className="mt-0.5 text-brand-accent">&#10003;</span>
                       Available to borrowers with bad or no credit
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="mt-0.5 text-green-600">&#10003;</span>
+                      <span className="mt-0.5 text-brand-accent">&#10003;</span>
                       Simple application process
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="mt-0.5 text-green-600">&#10003;</span>
+                      <span className="mt-0.5 text-brand-accent">&#10003;</span>
                       No collateral required
                     </li>
                   </ul>
@@ -281,14 +282,14 @@ export default function PaydayLoansPage() {
               </p>
 
               <div className="mb-4">
-                <h3 className="mb-2 text-sm font-semibold text-green-700">
+                <h3 className="mb-2 text-sm font-semibold text-brand">
                   States Where Payday Loans Are Legal
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {legalStates.map((s) => (
                     <span
                       key={s.slug}
-                      className="rounded bg-green-50 px-2 py-1 text-xs font-medium text-green-700"
+                      className="rounded bg-brand-lighter px-2 py-1 text-xs font-medium text-brand"
                     >
                       {s.abbreviation}
                     </span>
@@ -365,7 +366,7 @@ export default function PaydayLoansPage() {
                   <Link
                     key={loan.slug}
                     href={`/borrow/${loan.slug}`}
-                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-green-300 hover:bg-green-50 hover:text-green-700"
+                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-brand-light hover:bg-brand-lighter hover:text-brand"
                   >
                     {loan.displayAmount}
                   </Link>
@@ -381,28 +382,28 @@ export default function PaydayLoansPage() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <Link
                   href="/loans/bad-credit"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Bad Credit Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Options for borrowers with less-than-perfect credit</p>
                 </Link>
                 <Link
                   href="/loans/same-day"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Same Day Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Get funds deposited as fast as the same business day</p>
                 </Link>
                 <Link
                   href="/loans/no-credit-check"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">No Credit Check Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Lenders that use alternative data beyond your credit score</p>
                 </Link>
                 <Link
                   href="/loans/installment"
-                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-green-300 hover:shadow-sm"
+                  className="rounded-lg border border-gray-200 p-4 transition-all hover:border-brand-light hover:shadow-sm"
                 >
                   <p className="font-semibold text-gray-900">Installment Loans</p>
                   <p className="mt-1 text-sm text-gray-500">Repay over time with fixed monthly payments</p>
@@ -417,19 +418,19 @@ export default function PaydayLoansPage() {
               </h2>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="https://www.consumerfinance.gov/consumer-tools/payday-loans/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">Consumer Financial Protection Bureau (CFPB) — Payday Loans</a>
+                  <a href="https://www.consumerfinance.gov/consumer-tools/payday-loans/" target="_blank" rel="noopener noreferrer" className="text-brand underline">Consumer Financial Protection Bureau (CFPB) — Payday Loans</a>
                   {" "}<span className="text-gray-500">— Federal guidance on payday lending rights and protections</span>
                 </li>
                 <li>
-                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">Federal Trade Commission (FTC) — Payday Lending</a>
+                  <a href="https://consumer.ftc.gov/credit-loans-and-debt" target="_blank" rel="noopener noreferrer" className="text-brand underline">Federal Trade Commission (FTC) — Payday Lending</a>
                   {" "}<span className="text-gray-500">— Consumer protection information and enforcement actions</span>
                 </li>
                 <li>
-                  <a href="https://www.ncua.gov/consumers/financial-literacy-resources" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">National Credit Union Administration (NCUA) — Payday Alternative Loans</a>
+                  <a href="https://www.ncua.gov/consumers/financial-literacy-resources" target="_blank" rel="noopener noreferrer" className="text-brand underline">National Credit Union Administration (NCUA) — Payday Alternative Loans</a>
                   {" "}<span className="text-gray-500">— Information on lower-cost PAL alternatives from credit unions</span>
                 </li>
                 <li>
-                  <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">211.org</a>
+                  <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" className="text-brand underline">211.org</a>
                   {" "}<span className="text-gray-500">— Find local emergency financial assistance programs</span>
                 </li>
               </ul>

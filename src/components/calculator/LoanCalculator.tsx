@@ -51,7 +51,7 @@ export function LoanCalculator() {
             htmlFor="amount"
             className="mb-1 block text-sm font-medium text-gray-900"
           >
-            Loan Amount: <span className="text-green-700">${amount.toLocaleString()}</span>
+            Loan Amount: <span className="text-brand">${amount.toLocaleString()}</span>
           </label>
           <input
             id="amount"
@@ -61,7 +61,7 @@ export function LoanCalculator() {
             step={100}
             value={amount}
             onChange={(e) => setAmount(Number(e.target.value))}
-            className="w-full accent-green-700"
+            className="w-full accent-brand"
           />
           <div className="mt-1 flex justify-between text-xs text-gray-400">
             <span>$100</span>
@@ -75,7 +75,7 @@ export function LoanCalculator() {
             htmlFor="apr"
             className="mb-1 block text-sm font-medium text-gray-900"
           >
-            APR: <span className="text-green-700">{apr}%</span>
+            APR: <span className="text-brand">{apr}%</span>
           </label>
           <input
             id="apr"
@@ -85,7 +85,7 @@ export function LoanCalculator() {
             step={1}
             value={apr}
             onChange={(e) => setApr(Number(e.target.value))}
-            className="w-full accent-green-700"
+            className="w-full accent-brand"
           />
           <div className="mt-1 flex justify-between text-xs text-gray-400">
             <span>1%</span>
@@ -99,7 +99,7 @@ export function LoanCalculator() {
             htmlFor="term"
             className="mb-1 block text-sm font-medium text-gray-900"
           >
-            Term: <span className="text-green-700">{term} months</span>
+            Term: <span className="text-brand">{term} months</span>
           </label>
           <input
             id="term"
@@ -109,7 +109,7 @@ export function LoanCalculator() {
             step={1}
             value={term}
             onChange={(e) => setTerm(Number(e.target.value))}
-            className="w-full accent-green-700"
+            className="w-full accent-brand"
           />
           <div className="mt-1 flex justify-between text-xs text-gray-400">
             <span>1 month</span>
@@ -120,9 +120,9 @@ export function LoanCalculator() {
 
       {/* Results */}
       <div className="mt-8 grid gap-4 sm:grid-cols-3">
-        <div className="rounded-lg bg-green-50 p-4 text-center">
+        <div className="rounded-lg bg-brand-lighter p-4 text-center">
           <p className="text-sm text-gray-500">Monthly Payment</p>
-          <p className="text-2xl font-bold text-green-700">
+          <p className="text-2xl font-bold text-brand">
             {formatUsd(result.monthlyPayment)}
           </p>
         </div>

@@ -115,7 +115,7 @@ export default async function StateHubPage({ params }: Props) {
                       </td>
                       <td className="px-4 py-3">
                         {state.paydayLegal ? (
-                          <span className="font-medium text-green-700">
+                          <span className="font-medium text-brand">
                             Legal &amp; Regulated
                           </span>
                         ) : (
@@ -198,7 +198,7 @@ export default async function StateHubPage({ params }: Props) {
                           href={state.regulatorUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-green-700 underline"
+                          className="text-brand underline"
                         >
                           {state.regulatorName}
                         </a>
@@ -265,7 +265,7 @@ export default async function StateHubPage({ params }: Props) {
                   <Link
                     key={loan.slug}
                     href={`/borrow/${loan.slug}/${state.slug}`}
-                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-green-300 hover:bg-green-50 hover:text-green-700"
+                    className="rounded border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-600 transition-colors hover:border-brand-light hover:bg-brand-lighter hover:text-brand"
                   >
                     {loan.displayAmount}
                   </Link>
@@ -310,14 +310,14 @@ export default async function StateHubPage({ params }: Props) {
                   <Link
                     key={item.type}
                     href={item.href}
-                    className="flex items-center justify-between rounded-lg border border-gray-200 p-4 transition hover:border-green-300"
+                    className="flex items-center justify-between rounded-lg border border-gray-200 p-4 transition hover:border-brand-light"
                   >
                     <div>
                       <p className="font-semibold text-gray-900">{item.type}</p>
                       <p className="text-sm text-gray-500">{item.note}</p>
                     </div>
                     <span
-                      className={`rounded-full px-2 py-0.5 text-xs font-medium ${item.available ? "bg-green-50 text-green-700" : "bg-red-50 text-red-600"}`}
+                      className={`rounded-full px-2 py-0.5 text-xs font-medium ${item.available ? "bg-brand-lighter text-brand" : "bg-red-50 text-red-600"}`}
                     >
                       {item.available ? "Available" : "Not available"}
                     </span>
@@ -396,7 +396,7 @@ export default async function StateHubPage({ params }: Props) {
                   href={state.regulatorUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-green-700 underline"
+                  className="text-sm text-brand underline"
                 >
                   {state.regulatorName}
                 </a>
