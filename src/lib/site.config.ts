@@ -65,8 +65,8 @@ export interface SiteConfig {
 
   // Analytics (populated after site setup)
   analytics: {
-    gaId: string; // GA4 Measurement ID (G-XXXXXXX)
-    gscProperty: string; // Search Console property
+    gaId: "G-ZN2HT8QWYX",
+    gscProperty: "sc-domain:fundingzest.com",
   };
 
   // Cross-linking targets (populated by factory)
