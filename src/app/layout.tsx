@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { OrganizationSchema } from "@/components/seo/OrganizationSchema";
+import { GoogleAnalytics } from "@/lib/analytics/GoogleAnalytics";
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/site.config";
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex min-h-screen flex-col antialiased">
+        <GoogleAnalytics />
         <OrganizationSchema />
         <Header />
         <main className="flex-1">{children}</main>
